@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SCALL | Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="~/Assets/SCall/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    @*<link href="~/Assets/SCall/bootstrap/css/font-awesome.min.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    @*<link href="~/Assets/SCall/bootstrap/css/ionicons.min.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/Assets/SCall/plugins/datatables/dataTables.bootstrap.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="~/Assets/SCall/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Assets/SCall/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="~/Assets/SCall/dist/css/skins/_all-skins.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <script src="~/Assets/SCall/plugins/jQuery/jquery-2.2.3.min.js"></script>
+
+    <script src="../Scripts/angular.min.js"></script>
+
+    @*<script src="~/Scripts/angular.js"></script>*@
+    <link href="~/Content/alertifyjs/themes/default.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/alertify.css" rel="stylesheet" />
+    <script src="~/Content/alertifyjs/alertify.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/ngStorage.min.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+    <!-- bootstrap datepicker -->
+    @*<link rel="stylesheet" href="~/Assets/SCall/plugins/datepicker/datepicker3.css">*@
+
+
+    <script src="~/Scripts/angular-sanitize.js"></script>
+    <script src="~/AngularJS/SCall.js"></script>
+    <style>        
+            .skin-blue .main-header .navbar {
+                background-color: #0d0326 !important;
+            }
+        .skin-blue .main-header .logo {
+            background-color: #0d0326!important;
+            color: #fff;
+            border-bottom: 0 solid transparent;
+        }
+        .skin-blue .main-header .navbar .sidebar-toggle {
+            color: #fff;
+        }
+            .skin-blue .main-header .navbar .sidebar-toggle:hover {
+                background-color: #0d0326 !important;
+                color: #fff;
+            }
+        .sidebar {
+            background-color: #e3e3e3 !important;
+            padding-bottom: 10px;
+            color: #000 !important
+        }
+        .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+            background-color: #e3e3e3 !important;
+            color: #000 !important
+        }
+        .skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+            color: #000 !important;
+            background: #e3e3e3 !important;
+            border-left-color: #35379a !important;
+        }
+        .skin-blue .sidebar-menu > li.header {
+            color: #000 !important;
+            background: #ff513b !important;
+        }
+        .skin-blue .main-header li.user-header {
+            background-color: #0d0326 !important;
+            color: #000 !important;
+        }
+        .skin-blue .sidebar a {
+            color: #000000!important;
+        }
+        .btn-custom {
+            color: #fff;
+            background-color: #d54a4f !important;
+            border-color: #d54a4f !important;            
+        }
+
+            .btn-custom:hover {
+                color: #fff;
+                background-color: #0d0326 !important;
+                border-color: #0d0326 !important;
+            }
+        .btn-success {
+            color: #fff;
+            background-color: #0d0326 !important;
+            border-color: #0d0326 !important;
+        }
+
+            .btn-success:hover {
+                color: #fff;
+                background-color: #d54a4f !important;
+                border-color: #d54a4f !important;
+            }
+        .skin-blue .sidebar .treeview-menu a {
+            color: #fff !important;
+        }        
+    </style>
+</head>
+<body ng-app="SCALL" class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../SCall/Index" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini">
+                    <img src="~/Assets/Cimpleit.png" />
+                </span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="~/Assets/Cimpleit.png" /></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+
+                        <!-- User Account: style can be found in dropdown.less -->
+                        @*<li>
+                                @Session["remaining_days_SCL_account"] Days left
+                            </li>*@
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="~/Attachments/@Session["SCL_user_profile"]" class="user-image" alt="User Image">
+                                <span class="hidden-xs">@Session["username_SCL_account"]</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="~/Assets/SCall/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <p>
+                                        @Session["name_SCL_account"]
+                                        <small>@Session["email_SCL_account"]</small>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-success btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="../Master/Logout" class="btn btn-custom btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        @*<li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>*@
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+
+                    <div class="image">
+                        <img src="~/Attachments/@Session["SCL_company_picture"]" alt="User Image">
+                    </div>
+                    <h2 style="color:#0d0326!important">@Session["name_SCL_account"]</h2>
+                </div>
+
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li id="active_dash"><a href="../SCall/MainIndex"><i class="fa fa-dashboard"></i> <span>DashBoard</span></a></li>
+                    <li id="active_dept_dash"><a href="../SCall/Index"><i class="fa fa-dashboard"></i> <span>Department DashBoard</span></a></li>
+                    <li id="active_loc_dash"><a href="../SCall/LocationComplaints"><i class="fa fa-dashboard"></i> <span>Location DashBoard</span></a></li>
+                    <li id="active_user_dash"><a href="../SCall/UserComplaints"><i class="fa fa-dashboard"></i> <span>Users DashBoard</span></a></li>
+                    @*<li class="treeview" id="active_master">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Master</span>
+                <span class="pull-right-container">
+                    <span class="label label-primary pull-right"><i class="fa fa-angle-left"></i></span>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+
+
+
+            </ul>
+        </li>*@
+                    <li id="active_master">
+                        <a href="#">
+                            <i class="fa fa-circle-o text-red"></i> Master
+                            <span class="pull-right-container">
+                                <span class="label label-primary pull-right"><i class="fa fa-angle-left"></i></span>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li id="active_cr_dept"><a href="../Master/AddNewDepartment" class="treeview-menu-a"><i class="fa fa-circle-o text-green"></i> Create Department</a></li>
+                            <li id="active_cr_role"><a href="../Master/AddNewRole" class="treeview-menu-a"><i class="fa fa-circle-o text-red"></i> Create Role</a></li>
+                            <li id="active_cr_user"><a href="../Master/CreateUser" class="treeview-menu-a"><i class="fa fa-circle-o text-aqua"></i> Create User</a></li>
+                            <li id="active_cr_user"><a href="../Master/AddCategories" class="treeview-menu-a"><i class="fa fa-circle-o text-blue"></i> Create Category</a></li>
+                            <li id="active_cr_user"><a href="../Master/AddSubCategories" class="treeview-menu-a"><i class="fa fa-circle-o text-yellow"></i> Create Sub Category</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview" id="active_comp">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i>
+                            <span>Complaints</span>
+                            <span class="pull-right-container">
+                                <span class="label label-primary pull-right"><i class="fa fa-angle-left"></i></span>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li id="active_add_comp"><a href="../Complaint/AddComplaint"><i class="fa fa-circle-o text-green"></i> Add Complaint</a></li>
+                            <li id="active_view_comp"><a href="../Complaint/Compaints"><i class="fa fa-circle-o text-blue"></i> View Complaints</a></li>
+                            <li id="active_gen_job"><a href="../Complaint/CreateJobCard"><i class="fa fa-circle-o text-yellow"></i> Generate JobCard</a></li>
+                            <li id="active_gen_job"><a href="../Complaint/ViewJobCards"><i class="fa fa-circle-o text-red"></i> View JobCard</a></li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer class="main-footer">
+
+            <strong>Copyright &copy; 2021 <a href="">SCall</a>.</strong> All rights
+            reserved.
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs"></ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane" id="control-sidebar-home-tab">
+                </div>
+                <!-- /.tab-pane -->
+
+
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 2.2.3 -->
+    <!-- Bootstrap 3.3.6 -->
+    <script src="~/Assets/SCall/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Assets/SCall/plugins/select2/select2.full.min.js"></script>
+    <!-- InputMask -->
+    @*<script src="~/Assets/SCall/plugins/input-mask/jquery.inputmask.js"></script>
+        <script src="~/Assets/SCall/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+        <script src="~/Assets/SCall/plugins/input-mask/jquery.inputmask.extensions.js"></script>*@
+    <!-- DataTables -->
+    <script src="~/Assets/SCall/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Assets/SCall/plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <!-- SlimScroll 1.3.0 -->
+    <script src="~/Assets/SCall/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+
+    <!-- FastClick -->
+    <script src="~/Assets/SCall/plugins/fastclick/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Assets/SCall/dist/js/app.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/Assets/SCall/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- jvectormap -->
+    <script src="~/Assets/SCall/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/Assets/SCall/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- ChartJS 1.0.1 -->
+    <script src="~/Assets/SCall/plugins/chartjs/Chart.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/Assets/SCall/dist/js/demo.js"></script>
+    <script src="~/Assets/SCall/dist/js/pages/dashboard2.js"></script>
+
+</body>
+</html>

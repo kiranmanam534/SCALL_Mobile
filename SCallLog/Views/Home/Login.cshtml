@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        $('#active_login').addClass("active");
+
+    });
+</script>
+<script src="~/AngularJS/Login.js?trd=@DateTime.Now.Millisecond"></script>
+
+<section class="contact py-5">
+    <div class="container" ng-controller="LoginCtrl" style="margin-top:80px">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               
+                <div class="modal-body">
+
+                    <div class="login px-4 mx-auto mw-100">
+                        <h5 class="text-center mb-4">Login</h5>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label class="mb-2">Email address</label>
+                                <input type="email" class="form-control" name="username" ng-model="PMSL.Email" id="username" placeholder="Enter Username(Email)" aria-describedby="sizing-addon1" required>
+                                @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-2">Password</label>
+                                <input type="Password" name="password" id="password" ng-model="PMSL.Password" class="form-control" placeholder="Enter Password" aria-describedby="sizing-addon1" required>
+                            </div>
+                            
+                            <div class="center-text" style="text-align:center">
+                                <label class="mb-2"></label>
+                                    <button type="button" name="btnSearch" class="btn btn-success" ng-click="LoginUser(PMSL)">
+                                        <img src="~/Assets/pms_loader.gif" style="width:20px;height:20px;" ng-show="imgLoader_Save" /><i class="fa fa-key" ng-hide="imgLoader_Save"></i>&nbsp;Sign In
+                                    </button>
+                            </div>
+
+                            <a href="../Home/ForgotPassword" style="text-align:center;color:blue">Forgot Password?</a>
+                           
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<div class="cpy-right text-center" style="position:fixed;bottom:0;width:100%">
+    <p>© 2019 SCALL. All Rights Reserved | Design by <a href="https://sixstepsolutioon.co.za/" target="_blank">Six Step Solution</a></p>
+</div>
+
+

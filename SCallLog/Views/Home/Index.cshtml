@@ -1,0 +1,80 @@
+﻿@{
+   ViewBag.Title = "Home Page";
+}
+<script>
+    var $ = jQuery;
+    $(document).ready(function () {
+        $('#active_home').addClass("active seleceted");
+
+    });
+</script>
+<script src="~/AngularJS/welcome.js"></script>
+<!-- main image slider container -->
+<style>
+    .modal-title {
+        font-size: 18px !important;
+        /* font-weight: 700; */
+        padding: 0 !important;
+        letter-spacing: 1px;
+        color: #333;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid #eee;
+    }
+</style>
+<section class="slide-window">
+    <div class="slide-wrapper" style="width:100%;">
+        @*<div class="slide">
+                <div class="slide-caption text-center">
+                    <h2 class="text-uppercase">Welcome to <span>CRM</span></h2>
+                    <p class="my-4">
+                        Customer-relationship management is an approach to manage a company's interaction with current and potential customers.
+                        It uses data analysis about customers' history with a company to improve business relationships with customers, specifically focusing on customer retention and ultimately driving sales growth.
+                    </p>
+                    <div class="read">
+                        <a href="#" data-toggle="modal" data-target="#exampleModalCenter1" role="button">Read More <span class="btn ml-2"><i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>
+                    </div>
+                </div>
+            </div>*@
+        <div class="slide slide3">
+            <div class="slide-caption text-center">
+                <h2 class="text-uppercase">Welcome to <span>SCALL</span></h2>
+                <p class="my-4">
+                    An approach to manage a company's interaction with current and potential customers.
+                </p>
+                @*<div class="read">
+                        <a href="#" data-toggle="modal" data-target="#exampleModalCenter1" role="button">Read More <span class="btn ml-2"><i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>
+                    </div>*@
+            </div>
+        </div>
+        @*<div class="slide slide3">
+                <div class="slide-caption text-center">
+                    <h2 class="text-uppercase">Welcome to <span>CRM</span></h2>
+                    <p class="my-4">
+                        Customer-relationship management is an approach to manage a company's interaction with current and potential customers.
+                        It uses data analysis about customers' history with a company to improve business relationships with customers, specifically focusing on customer retention and ultimately driving sales growth.
+                    </p>
+                    <div class="read">
+                        <a href="#" data-toggle="modal" data-target="#exampleModalCenter1" role="button">Read More <span class="btn ml-2"><i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>
+                    </div>
+                </div>
+            </div>*@
+    </div>
+    @*<div class="slide-controller">
+        <div class="slide-control-left">
+            <div class="slide-control-line"></div>
+            <div class="slide-control-line"></div>
+        </div>
+        <div class="slide-control-right">
+            <div class="slide-control-line"></div>
+            <div class="slide-control-line"></div>
+        </div>
+    </div>*@
+</section>
+<!-- end of main image slider container -->
+
+
+<div class="cpy-right text-center">
+    <p>© 2019 SCall. All Rights Reserved | Design by <a href="https://sixstepsolutioon.co.za/" target="_blank">Six Step Solution</a></p>
+</div>
