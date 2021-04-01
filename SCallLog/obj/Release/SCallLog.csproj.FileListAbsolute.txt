@@ -1,0 +1,305 @@
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ApplicationInsights.config
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\SCallLog.dll.config
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\SCallLog.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\SCallLog.pdb
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csc.exe
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csc.exe.config
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csc.rsp
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csi.exe
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csi.exe.config
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csi.rsp
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.Managed.Core.targets
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.AppContext.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Collections.Immutable.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Console.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.Compression.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.FileSystem.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.Pipes.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Reflection.Metadata.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.AccessControl.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Claims.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Principal.Windows.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.ValueTuple.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Xml.XmlDocument.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Xml.XPath.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\vbc.exe
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\vbc.exe.config
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\vbc.rsp
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\VBCSCompiler.exe
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\VBCSCompiler.exe.config
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Antlr3.Runtime.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\EntityFramework.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\EntityFramework.SqlServer.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.Agent.Intercept.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.DependencyCollector.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.Web.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.WindowsServer.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.ApplicationInsights.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.Web.Infrastructure.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Newtonsoft.Json.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Diagnostics.DiagnosticSource.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Helpers.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Mvc.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Optimization.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Razor.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.Deployment.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.Razor.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\WebGrease.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\EntityFramework.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\EntityFramework.SqlServer.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Helpers.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Mvc.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Optimization.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Razor.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.Deployment.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.Razor.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Newtonsoft.Json.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Antlr3.Runtime.pdb
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Diagnostics.DiagnosticSource.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.DependencyCollector.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.WindowsServer.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.Web.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.csproj.CoreCompileInputs.cache
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.csproj.CopyComplete
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.dll
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.pdb
+F:\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.csprojAssemblyReference.cache
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ApplicationInsights.config
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\SCallLog.dll.config
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\SCallLog.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\SCallLog.pdb
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csc.exe
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csc.exe.config
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csc.rsp
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csi.exe
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csi.exe.config
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\csi.rsp
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.AppContext.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Collections.Immutable.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Console.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.Compression.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.FileSystem.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.IO.Pipes.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Reflection.Metadata.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.AccessControl.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Claims.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.ValueTuple.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Xml.XPath.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\vbc.exe
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\vbc.exe.config
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\vbc.rsp
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\VBCSCompiler.exe
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\roslyn\VBCSCompiler.exe.config
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Antlr3.Runtime.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\EntityFramework.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\EntityFramework.SqlServer.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.DependencyCollector.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.Web.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.WindowsServer.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.ApplicationInsights.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.Web.Infrastructure.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Newtonsoft.Json.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Helpers.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Mvc.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Optimization.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Razor.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.Deployment.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.Razor.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\WebGrease.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\EntityFramework.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\EntityFramework.SqlServer.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Helpers.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Mvc.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Optimization.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.Razor.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.Deployment.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Web.WebPages.Razor.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Newtonsoft.Json.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Antlr3.Runtime.pdb
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.DependencyCollector.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.WindowsServer.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.AI.Web.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.csprojAssemblyReference.cache
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.csproj.CoreCompileInputs.cache
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.csproj.CopyComplete
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\obj\Release\SCallLog.pdb
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.Common.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.Dns.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.Groupware.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.Imap4.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.Mail.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.Nntp.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.OpenPGP.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.Pop3.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.Smtp.dll
+D:\Kanna D Drive\G Latest\DotNet Projects\SCallLog\SCallLog\SCallLog\bin\ActiveUp.Net.WhoIs.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ApplicationInsights.config
+D:\Kanna_Projects\SCallLog\SCallLog\bin\SCallLog.dll.config
+D:\Kanna_Projects\SCallLog\SCallLog\bin\SCallLog.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\SCallLog.pdb
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\csc.exe
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\csc.exe.config
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\csc.rsp
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\csi.exe
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\csi.exe.config
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\csi.rsp
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.AppContext.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Collections.Immutable.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Console.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.IO.Compression.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.IO.FileSystem.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.IO.Pipes.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Reflection.Metadata.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Security.AccessControl.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Security.Claims.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.ValueTuple.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Xml.XPath.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\vbc.exe
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\vbc.exe.config
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\vbc.rsp
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\VBCSCompiler.exe
+D:\Kanna_Projects\SCallLog\SCallLog\bin\roslyn\VBCSCompiler.exe.config
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.Common.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.Dns.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.Groupware.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.Imap4.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.Mail.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.Nntp.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.OpenPGP.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.Pop3.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.Smtp.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\ActiveUp.Net.WhoIs.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Antlr3.Runtime.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\EntityFramework.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\EntityFramework.SqlServer.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.DependencyCollector.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.Web.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.WindowsServer.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.ApplicationInsights.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.Web.Infrastructure.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Newtonsoft.Json.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.Helpers.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.Mvc.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.Optimization.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.Razor.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.WebPages.Deployment.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.WebPages.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.WebPages.Razor.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\WebGrease.dll
+D:\Kanna_Projects\SCallLog\SCallLog\bin\EntityFramework.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\EntityFramework.SqlServer.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.Helpers.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.Mvc.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.Optimization.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.Razor.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.WebPages.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.WebPages.Deployment.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Web.WebPages.Razor.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Newtonsoft.Json.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Antlr3.Runtime.pdb
+D:\Kanna_Projects\SCallLog\SCallLog\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.DependencyCollector.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.WindowsServer.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.AI.Web.xml
+D:\Kanna_Projects\SCallLog\SCallLog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Kanna_Projects\SCallLog\SCallLog\obj\Release\SCallLog.csprojAssemblyReference.cache
+D:\Kanna_Projects\SCallLog\SCallLog\obj\Release\SCallLog.csproj.CoreCompileInputs.cache
+D:\Kanna_Projects\SCallLog\SCallLog\obj\Release\SCallLog.csproj.CopyComplete
+D:\Kanna_Projects\SCallLog\SCallLog\obj\Release\SCallLog.dll
+D:\Kanna_Projects\SCallLog\SCallLog\obj\Release\SCallLog.pdb

@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="scallModelStoreContainer" CdmEntityContainer="scallEntities">
+    <EntitySetMapping Name="SCL_Category">
+      <EntityTypeMapping TypeName="scallModel.SCL_Category">
+        <MappingFragment StoreEntitySet="SCL_Category">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DEPARTMENT_ID" ColumnName="DEPARTMENT_ID" />
+          <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+          <ScalarProperty Name="CATEGORY_DESC" ColumnName="CATEGORY_DESC" />
+          <ScalarProperty Name="Step1" ColumnName="Step1" />
+          <ScalarProperty Name="Step2" ColumnName="Step2" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_CompanyRegistration">
+      <EntityTypeMapping TypeName="scallModel.SCL_CompanyRegistration">
+        <MappingFragment StoreEntitySet="SCL_CompanyRegistration">
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="company_uniqueID" ColumnName="company_uniqueID" />
+          <ScalarProperty Name="company_email" ColumnName="company_email" />
+          <ScalarProperty Name="company_password" ColumnName="company_password" />
+          <ScalarProperty Name="company_mobile" ColumnName="company_mobile" />
+          <ScalarProperty Name="company_address" ColumnName="company_address" />
+          <ScalarProperty Name="company_status" ColumnName="company_status" />
+          <ScalarProperty Name="cdate" ColumnName="cdate" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+          <ScalarProperty Name="SubscriptionEndDate" ColumnName="SubscriptionEndDate" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_ComplaintImages">
+      <EntityTypeMapping TypeName="scallModel.SCL_ComplaintImages">
+        <MappingFragment StoreEntitySet="SCL_ComplaintImages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Complaint_ID" ColumnName="Complaint_ID" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+          <ScalarProperty Name="AttachmentBinary" ColumnName="AttachmentBinary" />
+          <ScalarProperty Name="AttachmentRealName" ColumnName="AttachmentRealName" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Device" ColumnName="Device" />
+          <ScalarProperty Name="GeneratedAttachmentName" ColumnName="GeneratedAttachmentName" />
+          <ScalarProperty Name="Complaint_ReferenceNo" ColumnName="Complaint_ReferenceNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_ComplaintsAllocated">
+      <EntityTypeMapping TypeName="scallModel.SCL_ComplaintsAllocated">
+        <MappingFragment StoreEntitySet="SCL_ComplaintsAllocated">
+          <ScalarProperty Name="CAID" ColumnName="CAID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CompID" ColumnName="CompID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ContactTime" ColumnName="ContactTime" />
+          <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+          <ScalarProperty Name="ContactTo" ColumnName="ContactTo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_Customer">
+      <EntityTypeMapping TypeName="scallModel.SCL_Customer">
+        <MappingFragment StoreEntitySet="SCL_Customer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PwdChange" ColumnName="PwdChange" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="EmailNotify" ColumnName="EmailNotify" />
+          <ScalarProperty Name="SMSNotify" ColumnName="SMSNotify" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_Department">
+      <EntityTypeMapping TypeName="scallModel.SCL_Department">
+        <MappingFragment StoreEntitySet="SCL_Department">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DEPARTMENT_ID" ColumnName="DEPARTMENT_ID" />
+          <ScalarProperty Name="DEPARTMENT_DESC" ColumnName="DEPARTMENT_DESC" />
+          <ScalarProperty Name="Step1" ColumnName="Step1" />
+          <ScalarProperty Name="Step2" ColumnName="Step2" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_Login">
+      <EntityTypeMapping TypeName="scallModel.SCL_Login">
+        <MappingFragment StoreEntitySet="SCL_Login">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="cdate" ColumnName="cdate" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="SubscriptionEndDate" ColumnName="SubscriptionEndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_Mobile_Complaints_Audit">
+      <EntityTypeMapping TypeName="scallModel.SCL_Mobile_Complaints_Audit">
+        <MappingFragment StoreEntitySet="SCL_Mobile_Complaints_Audit">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Complaint_ReferenceNo" ColumnName="Complaint_ReferenceNo" />
+          <ScalarProperty Name="Complaint_ID" ColumnName="Complaint_ID" />
+          <ScalarProperty Name="Complaint_Date" ColumnName="Complaint_Date" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Category_Desc" ColumnName="Category_Desc" />
+          <ScalarProperty Name="SubCategory_Id" ColumnName="SubCategory_Id" />
+          <ScalarProperty Name="SubCategory_Desc" ColumnName="SubCategory_Desc" />
+          <ScalarProperty Name="Dept_Id" ColumnName="Dept_Id" />
+          <ScalarProperty Name="Dept_Desc" ColumnName="Dept_Desc" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ComplaintStatus" ColumnName="ComplaintStatus" />
+          <ScalarProperty Name="Lattitude" ColumnName="Lattitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="img_data" ColumnName="img_data" />
+          <ScalarProperty Name="automatic_complaint" ColumnName="automatic_complaint" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_Sub_Category">
+      <EntityTypeMapping TypeName="scallModel.SCL_Sub_Category">
+        <MappingFragment StoreEntitySet="SCL_Sub_Category">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+          <ScalarProperty Name="SUB_CATEGORY_ID" ColumnName="SUB_CATEGORY_ID" />
+          <ScalarProperty Name="SUB_CATEGORY_DESC" ColumnName="SUB_CATEGORY_DESC" />
+          <ScalarProperty Name="Step1" ColumnName="Step1" />
+          <ScalarProperty Name="Step2" ColumnName="Step2" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_UserDepartments">
+      <EntityTypeMapping TypeName="scallModel.SCL_UserDepartments">
+        <MappingFragment StoreEntitySet="SCL_UserDepartments">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_UserRoles">
+      <EntityTypeMapping TypeName="scallModel.SCL_UserRoles">
+        <MappingFragment StoreEntitySet="SCL_UserRoles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_UserRoleScreenMapping">
+      <EntityTypeMapping TypeName="scallModel.SCL_UserRoleScreenMapping">
+        <MappingFragment StoreEntitySet="SCL_UserRoleScreenMapping">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_Users">
+      <EntityTypeMapping TypeName="scallModel.SCL_Users">
+        <MappingFragment StoreEntitySet="SCL_Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPass" ColumnName="UserPass" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
+          <ScalarProperty Name="PwdChange" ColumnName="PwdChange" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_UsersAudit">
+      <EntityTypeMapping TypeName="scallModel.SCL_UsersAudit">
+        <MappingFragment StoreEntitySet="SCL_UsersAudit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPass" ColumnName="UserPass" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
+          <ScalarProperty Name="AuditCreatedBy" ColumnName="AuditCreatedBy" />
+          <ScalarProperty Name="AuditCreatedDateTime" ColumnName="AuditCreatedDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_UserScreens">
+      <EntityTypeMapping TypeName="scallModel.SCL_UserScreens">
+        <MappingFragment StoreEntitySet="SCL_UserScreens">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ScreenName" ColumnName="ScreenName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_UserwiseScreenMapping">
+      <EntityTypeMapping TypeName="scallModel.SCL_UserwiseScreenMapping">
+        <MappingFragment StoreEntitySet="SCL_UserwiseScreenMapping">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_getComplaintHistoryByRefNo" FunctionName="scallModel.Store.sp_getComplaintHistoryByRefNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="scallModel.sp_getComplaintHistoryByRefNo_Result">
+          <ScalarProperty Name="Complaint_ReferenceNo" ColumnName="Complaint_ReferenceNo" />
+          <ScalarProperty Name="Complaint_Date" ColumnName="Complaint_Date" />
+          <ScalarProperty Name="Category_Desc" ColumnName="Category_Desc" />
+          <ScalarProperty Name="SubCategory_Desc" ColumnName="SubCategory_Desc" />
+          <ScalarProperty Name="Dept_Desc" ColumnName="Dept_Desc" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ComplaintStatus" ColumnName="ComplaintStatus" />
+          <ScalarProperty Name="automatic_complaint" ColumnName="automatic_complaint" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getComplaintHistoryByRefNumber" FunctionName="scallModel.Store.sp_getComplaintHistoryByRefNumber">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="scallModel.sp_getComplaintHistoryByRefNumber_Result">
+          <ScalarProperty Name="Complaint_ReferenceNo" ColumnName="Complaint_ReferenceNo" />
+          <ScalarProperty Name="Complaint_Date" ColumnName="Complaint_Date" />
+          <ScalarProperty Name="Category_Desc" ColumnName="Category_Desc" />
+          <ScalarProperty Name="SubCategory_Desc" ColumnName="SubCategory_Desc" />
+          <ScalarProperty Name="Dept_Desc" ColumnName="Dept_Desc" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ComplaintStatus" ColumnName="ComplaintStatus" />
+          <ScalarProperty Name="automatic_complaint" ColumnName="automatic_complaint" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="aFirstName" ColumnName="aFirstName" />
+          <ScalarProperty Name="aLastName" ColumnName="aLastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getDashboardData" FunctionName="scallModel.Store.sp_getDashboardData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="scallModel.sp_getDashboardData_Result">
+          <ScalarProperty Name="ComplaintStatus" ColumnName="ComplaintStatus" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getDashboardData1" FunctionName="scallModel.Store.sp_getDashboardData1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="scallModel.sp_getDashboardData1_Result">
+          <ScalarProperty Name="ComplaintStatus" ColumnName="ComplaintStatus" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getComplaintCountsByMonthWise" FunctionName="scallModel.Store.sp_getComplaintCountsByMonthWise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="scallModel.sp_getComplaintCountsByMonthWise_Result">
+          <ScalarProperty Name="month" ColumnName="month" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getComplaintCountsByDepartmentWise" FunctionName="scallModel.Store.sp_getComplaintCountsByDepartmentWise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="scallModel.sp_getComplaintCountsByDepartmentWise_Result">
+          <ScalarProperty Name="Dept_Desc" ColumnName="Dept_Desc" />
+          <ScalarProperty Name="ComplaintStatus" ColumnName="ComplaintStatus" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SCL_Mobile_Complaints">
+      <EntityTypeMapping TypeName="scallModel.SCL_Mobile_Complaints">
+        <MappingFragment StoreEntitySet="SCL_Mobile_Complaints">
+          <ScalarProperty Name="JC_REF" ColumnName="JC_REF" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="AllocateduserID" ColumnName="AllocateduserID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="automatic_complaint" ColumnName="automatic_complaint" />
+          <ScalarProperty Name="img_data" ColumnName="img_data" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Lattitude" ColumnName="Lattitude" />
+          <ScalarProperty Name="ComplaintStatus" ColumnName="ComplaintStatus" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Dept_Desc" ColumnName="Dept_Desc" />
+          <ScalarProperty Name="Dept_Id" ColumnName="Dept_Id" />
+          <ScalarProperty Name="SubCategory_Desc" ColumnName="SubCategory_Desc" />
+          <ScalarProperty Name="SubCategory_Id" ColumnName="SubCategory_Id" />
+          <ScalarProperty Name="Category_Desc" ColumnName="Category_Desc" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Complaint_Date" ColumnName="Complaint_Date" />
+          <ScalarProperty Name="Complaint_ReferenceNo" ColumnName="Complaint_ReferenceNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_getJobCardHistoryByRefNumber" FunctionName="scallModel.Store.sp_getJobCardHistoryByRefNumber">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="scallModel.sp_getJobCardHistoryByRefNumber_Result">
+          <ScalarProperty Name="Complaint_ReferenceNo" ColumnName="Complaint_ReferenceNo" />
+          <ScalarProperty Name="Complaint_Date" ColumnName="Complaint_Date" />
+          <ScalarProperty Name="Category_Desc" ColumnName="Category_Desc" />
+          <ScalarProperty Name="SubCategory_Desc" ColumnName="SubCategory_Desc" />
+          <ScalarProperty Name="Dept_Desc" ColumnName="Dept_Desc" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ComplaintStatus" ColumnName="ComplaintStatus" />
+          <ScalarProperty Name="automatic_complaint" ColumnName="automatic_complaint" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="aFirstName" ColumnName="aFirstName" />
+          <ScalarProperty Name="aLastName" ColumnName="aLastName" />
+          <ScalarProperty Name="JC_REFERENCE" ColumnName="JC_REFERENCE" />
+          <ScalarProperty Name="JC_DATE" ColumnName="JC_DATE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SCL_JobCards">
+      <EntityTypeMapping TypeName="scallModel.SCL_JobCards">
+        <MappingFragment StoreEntitySet="SCL_JobCards">
+          <ScalarProperty Name="JOB_DISTANCE" ColumnName="JOB_DISTANCE" />
+          <ScalarProperty Name="VEHICLE_NO" ColumnName="VEHICLE_NO" />
+          <ScalarProperty Name="SERVICE_HOURS" ColumnName="SERVICE_HOURS" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="COMP_COMMENTS" ColumnName="COMP_COMMENTS" />
+          <ScalarProperty Name="COMP_STATUS" ColumnName="COMP_STATUS" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="SUB_CATEGORY" ColumnName="SUB_CATEGORY" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="COMPLAINT_ID" ColumnName="COMPLAINT_ID" />
+          <ScalarProperty Name="COMPANY_ID" ColumnName="COMPANY_ID" />
+          <ScalarProperty Name="COMP_DATE" ColumnName="COMP_DATE" />
+          <ScalarProperty Name="COMP_REFERENCE" ColumnName="COMP_REFERENCE" />
+          <ScalarProperty Name="JC_DATE" ColumnName="JC_DATE" />
+          <ScalarProperty Name="JC_REFERENCE" ColumnName="JC_REFERENCE" />
+          <ScalarProperty Name="JCID" ColumnName="JCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_Comp_Status">
+      <EntityTypeMapping TypeName="scallModel.SCL_Comp_Status">
+        <MappingFragment StoreEntitySet="SCL_Comp_Status">
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="ISDELETED" ColumnName="ISDELETED" />
+          <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="STATUS_ID" ColumnName="STATUS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_WorkOrder_Details">
+      <EntityTypeMapping TypeName="scallModel.SCL_WorkOrder_Details">
+        <MappingFragment StoreEntitySet="SCL_WorkOrder_Details">
+          <ScalarProperty Name="SERVICE_HOURS" ColumnName="SERVICE_HOURS" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="COMP_COMMENTS" ColumnName="COMP_COMMENTS" />
+          <ScalarProperty Name="COMP_STATUS" ColumnName="COMP_STATUS" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="SUB_CATEGORY" ColumnName="SUB_CATEGORY" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="COMPLAINT_ID" ColumnName="COMPLAINT_ID" />
+          <ScalarProperty Name="COMPANY_ID" ColumnName="COMPANY_ID" />
+          <ScalarProperty Name="COMP_DATE" ColumnName="COMP_DATE" />
+          <ScalarProperty Name="JC_REFERENCE" ColumnName="JC_REFERENCE" />
+          <ScalarProperty Name="WO_DATE" ColumnName="WO_DATE" />
+          <ScalarProperty Name="WO_REFERENCE" ColumnName="WO_REFERENCE" />
+          <ScalarProperty Name="WOID" ColumnName="WOID" />
+          <ScalarProperty Name="WODID" ColumnName="WODID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCL_WorkOrder_Master">
+      <EntityTypeMapping TypeName="scallModel.SCL_WorkOrder_Master">
+        <MappingFragment StoreEntitySet="SCL_WorkOrder_Master">
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="WO_COMMENTS" ColumnName="WO_COMMENTS" />
+          <ScalarProperty Name="END_READING" ColumnName="END_READING" />
+          <ScalarProperty Name="START_READING" ColumnName="START_READING" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="COMPLAINT_ID" ColumnName="COMPLAINT_ID" />
+          <ScalarProperty Name="COMPANY_ID" ColumnName="COMPANY_ID" />
+          <ScalarProperty Name="COMP_DATE" ColumnName="COMP_DATE" />
+          <ScalarProperty Name="JC_REFERENCE" ColumnName="JC_REFERENCE" />
+          <ScalarProperty Name="WO_END_TIME" ColumnName="WO_END_TIME" />
+          <ScalarProperty Name="WO_START_TIME" ColumnName="WO_START_TIME" />
+          <ScalarProperty Name="WO_DATE" ColumnName="WO_DATE" />
+          <ScalarProperty Name="WO_REFERENCE" ColumnName="WO_REFERENCE" />
+          <ScalarProperty Name="WOID" ColumnName="WOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

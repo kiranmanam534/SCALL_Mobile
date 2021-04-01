@@ -1,0 +1,408 @@
+﻿
+@{
+    ViewBag.Title = "ViewJobCards";
+    Layout = "~/Views/Shared/_Layout_SCL.cshtml";
+}
+
+<script>
+    $(document).ready(function () {
+        $('#active_jobs').addClass("active selected");
+        $('#active_view_jobs').addClass("active");
+
+    });
+</script>
+<script src="~/AngularJS/SCL/AdminJobcardsList.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<link href="~/Content/leaflet_map/leaflet.css" rel="stylesheet" />
+<link href="~/Content/leaflet_map/MarkerCluster.css" rel="stylesheet" />
+<link href="~/Content/leaflet_map/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="~/Content/leaflet_map/leaflet.js"></script>
+<script src="~/Content/leaflet_map/leaflet.markercluster.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLOlMJLaIKTK3R1mRfv0gEI8bAmfqDxlk&sensor=false&libraries=places"></script>
+<style>
+    .ui-datepicker {
+        z-index: 1051 !important
+    }
+
+    .pac-container {
+        z-index: 10000 !important;
+        /*width:70% !important;*/
+    }
+
+    #map {
+        width: 100%;
+        height: 500px;
+        margin: 0px !important;
+        padding: 0px !important
+    }
+    /*table */
+    table {
+        border-collapse: collapse;
+    }
+
+        table th, table td {
+            padding: 3px;
+        }
+
+            table th:hover {
+                cursor: pointer;
+            }
+
+    .arrow-down:after, .arrow-up:after {
+        content: ' ';
+        position: relative;
+        left: 5px;
+        border: 6px solid transparent;
+    }
+
+    .arrow-down:after {
+        top: 12px;
+        border-top-color: black;
+    }
+
+    .arrow-up:after {
+        bottom: 15px;
+        border-bottom-color: black;
+    }
+
+    .arrow-down, .arrow-up {
+        padding-right: 10px;
+    }
+
+    .anchor_sorting {
+        text-decoration: none;
+        color: #fff !important;
+    }
+
+        .anchor_sorting:hover {
+            color: #fff !important;
+        }
+
+    .btn-md-80 {
+        width: 90px !important;
+    }
+
+    .error {
+        color: red;
+        border-color: red;
+    }
+
+    a.disabledInvisible {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .required_image {
+        width: 7px;
+        margin-top: -10px;
+    }
+
+    input[type='text'] {
+        height: 30px;
+    }
+
+    .add-on {
+        height: 100%;
+    }
+
+    .pagination {
+        height: 40px;
+        margin: 20px 0;
+    }
+
+        .pagination ul {
+            display: inline-block;
+            margin-left: 0;
+            margin-bottom: 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+            .pagination ul > li {
+                display: inline;
+            }
+
+                .pagination ul > li:first-child > a, .pagination ul > li:first-child > span {
+                    border-left-width: 1px;
+                    -webkit-border-radius: 3px 0 0 3px;
+                    -moz-border-radius: 3px 0 0 3px;
+                    border-radius: 3px 0 0 3px;
+                }
+
+                .pagination ul > li > a, .pagination ul > li > span {
+                    float: left;
+                    padding: 0 14px;
+                    line-height: 38px;
+                    text-decoration: none;
+                    background-color: #ffffff;
+                    border: 1px solid #dddddd;
+                    border-left-width: 0;
+                }
+
+            .pagination ul > .active > a, .pagination ul > .active > span {
+                color: #999999;
+                cursor: default;
+                background: gainsboro;
+            }
+
+    .gutter {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .container-fluid {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+</style>
+
+
+
+<div class="wrapper" ng-controller="AdminJobcardcntrl" ng-cloak>
+
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Job Cards
+                <small>View Jobs</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Jobs</li>
+            </ol>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row" ng-show="isShowTable">
+                <div class="col-xs-12">
+                    <div class="container-fluid" ng-cloak>
+                        <div class="containerif">
+                            <div style="background-color:#fff;height:auto;" id="tblCaseDetails">
+                                <div class="row gutter">
+                                    <div class="panel-heading">
+                                        <h4>Jobs per page</h4>
+                                        <span class="form-group page-size form-inline">
+                                            <select id="ddlPageSize" class="form-control control-color"
+                                                    ng-model="pageSizeSelected"
+                                                    ng-change="changePageSize()" style="height:33px">
+                                                <option value="2">2</option>
+                                                <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                            </select>
+                                        </span>
+                                        <div class="col-md-4 pull-right" style="margin-top:-5px;">
+                                            <div class="form-group">
+
+                                                <div class="input-group">
+
+                                                    <input type="text" ng-model="search" ng-change="SerachMethod(search)" class="form-control" placeholder="Search">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-search"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div ng-show="showLoader" class="text-center">
+                                        <span class="fa fa-spin fa-spinner fa-2x"></span>
+                                    </div>
+                                    <div class="panel-body" ng-show="showTable">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover tabel-condensed">
+                                                <thead style="background-color:#222d32 !important;border-collapse:collapse;font-size:16px;color:#fff !important">
+                                                    <tr>
+
+                                                        <th ng-click="sort('JC_REFERENCE')" ng-class="sortClass('JC_REFERENCE')"><a class="anchor_sorting" href="">JobCard</a>&nbsp;</th>
+                                                        <th ng-click="sort('DEPARTMENT')" ng-class="sortClass('DEPARTMENT')"><a class="anchor_sorting" href="">Department</a>&nbsp;</th>
+                                                        <th ng-click="sort('CATEGORY')" ng-if="searchDepartment != 'Automatic'" ng-class="sortClass('CATEGORY')"><a class="anchor_sorting" href="">Category</a>&nbsp;</th>
+                                                        <th ng-click="sort('SUB_CATEGORY')" ng-if="searchDepartment != 'Automatic'" ng-class="sortClass('SUB_CATEGORY')"><a class="anchor_sorting" href="">Sub Category</a>&nbsp;</th>
+                                                        <th ng-class="sortClass('COMP_COMMENTS')"><a class="anchor_sorting" href="">Comments</a>&nbsp;</th>
+                                                        <th ng-click="sort('ADDRESS')" ng-class="sortClass('ADDRESS')"><a class="anchor_sorting" href="">Location</a>&nbsp;</th>
+                                                        <th ng-click="sort('JC_DATE')" ng-class="sortClass('JC_DATE')"><a class="anchor_sorting" href="">Date</a>&nbsp;</th>
+                                                        <th ng-click="sort('COMP_STATUS')" ng-class="sortClass('COMP_STATUS')"><a class="anchor_sorting" href="">Status</a>&nbsp;</th>
+                                                        <th>History</th>
+                                                        <th>Map</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody ng-if="complaints.length>0">
+                                                    <tr ng-repeat="item in complaints">
+
+                                                        <td>{{item.JC_REFERENCE}}</td>
+                                                        <td>{{item.DEPARTMENT}}</td>
+                                                        <td ng-if="searchDepartment != 'Automatic'">{{item.CATEGORY}}</td>
+                                                        <td ng-if="searchDepartment != 'Automatic'">{{item.SUB_CATEGORY}}</td>
+                                                        <td>{{item.COMP_COMMENTS}}</td>
+                                                        <td>{{item.ADDRESS}}</td>
+                                                        <td>{{item.JC_DATE.replace('/Date(','').replace(')/','') | date:"dd-MM-yyyy HH:mm a" }}</td>
+                                                        <td>
+                                                            <span class="label label-danger" ng-if="item.COMP_STATUS=='Received'">{{item.COMP_STATUS}}</span>
+                                                            <span class="label label-primary" ng-if="item.COMP_STATUS=='InProgress'">{{item.COMP_STATUS}}</span>
+                                                            <span class="label label-primary" ng-if="item.COMP_STATUS=='Allocated'">{{item.COMP_STATUS}}</span>
+                                                            <span class="label label-warning" ng-if="item.COMP_STATUS=='Assigned'">{{item.COMP_STATUS}}</span>
+                                                            <span class="label label-warning" ng-if="item.COMP_STATUS=='Redirect'">{{item.COMP_STATUS}}</span>
+                                                            <span class="label label-success" ng-if="item.COMP_STATUS=='Completed'">{{item.COMP_STATUS}}</span>
+                                                            <span class="label label-danger" ng-if="item.COMP_STATUS=='Reallocate'">{{item.COMP_STATUS}}</span>
+                                                            <span class="label label-danger" ng-if="item.COMP_STATUS=='Hold'">{{item.COMP_STATUS}}</span>
+                                                        </td>
+
+                                                        <td style="text-align:center;color:red">
+                                                            <a href="" data-target="#myModal" title="View Jobcard" data-toggle="modal" ng-click="viewJobCardHistory(item.COMP_REFERENCE)">
+                                                                <i class="fa fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="" ng-click="viewJobCardMapDetails(item.COMPLAINT_ID)">
+                                                                <i class="fa fa-map-marker"></i>
+                                                            </a>
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                                <tbody ng-if="complaints.length==0">
+                                                    <tr>
+                                                        <td colspan="9" class="text-center"><b class="text-red">No result found!</b></td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot ng-if="complaints.length>0">
+                                                    <tr>
+                                                        <td align="center" colspan="9">
+                                                            <div class="pull-left">
+                                                                <a class="btn btn-primary">Page: {{pageIndex}} / {{numPages}}</a>
+                                                            </div>
+                                                            <div class="pull-right">
+                                                                <pagination total-items="totalCount" ng-change="pageChanged()" items-per-page="pageSizeSelected" direction-links="true" ng-model="pageIndex" max-size="maxSize" class="pagination" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col -->
+            </div>
+
+        </section>
+        <!-- /.content -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Jobcard History</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <ul class="timeline">
+                            <!-- timeline time label -->
+                            <li class="time-label">
+                                <span class="bg-red">
+                                    {{HistoryRefNumber}}
+                                </span>
+                            </li>
+                            <!-- /.timeline-label -->
+                            <!-- timeline item -->
+                            <li ng-repeat="his in JobHistory">
+                                <i class="fa fa-user bg-blue"></i>
+
+                                <div class="timeline-item">
+                                    <span class="time">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span class="label label-danger" ng-if="his.ComplaintStatus=='Received'">{{his.ComplaintStatus}}</span>
+                                        <span class="label label-primary" ng-if="his.ComplaintStatus=='InProgress'">{{his.ComplaintStatus}}</span>
+                                        <span class="label label-primary" ng-if="his.ComplaintStatus=='Allocated'">{{his.ComplaintStatus}}</span>
+                                        <span class="label label-warning" ng-if="his.ComplaintStatus=='Assigned'">{{his.ComplaintStatus}}</span>
+                                        <span class="label label-warning" ng-if="his.ComplaintStatus=='Redirect'">{{his.ComplaintStatus}}</span>
+                                        <span class="label label-success" ng-if="his.ComplaintStatus=='Completed'">{{his.ComplaintStatus}}</span>
+                                        <span class="label label-danger" ng-if="his.ComplaintStatus=='Reallocate'">{{his.ComplaintStatus}}</span>
+                                        <span class="label label-danger" ng-if="his.ComplaintStatus=='Hold'">{{his.ComplaintStatus}}</span>
+                                    </span>
+
+                                    <h3 class="timeline-header">
+                                        <a href="#" ng-if="his.FirstName!=null || his.FirstName!=''">{{his.FirstName}} {{his.LastName}}</a>
+                                        <a href="#" ng-if="his.FirstName==null || his.FirstName==''">{{his.aFirstName}} {{his.aLastName}}</a>
+                                        {{his.ModifiedDate.replace('/Date(','').replace(')/','') | date:"dd-MM-yyyy HH:mm a"}}
+                                    </h3>
+
+                                    <div class="timeline-body">
+                                        {{his.Comments}}
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-clock-o bg-gray"></i>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close"></i> Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModalMap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog pac-container" style="border-radius:5px!important;width:80% !important;">
+                <div class="modal-content">
+                    <div class="modal-header modal-danger">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            x
+                        </button>
+                        <h1 class="modal-title text-center" style="color:green;font-size:20px !important">Jobcard Location Details</h1>
+                    </div>
+                    <div class="modal-body">
+                        @*<div id="map"></div>*@
+                        <div id="map1" style="height: 480px;width: 100%;margin:auto"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-success" value="Close" data-dismiss="modal" />
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+

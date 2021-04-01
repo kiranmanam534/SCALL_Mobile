@@ -166,6 +166,7 @@ namespace SCallLog.Controllers
         {
             try
             {
+                //
                 var result = gc.db.SCL_Department.AsQueryable();
                 if (result.Any())
                 {

@@ -1,0 +1,53 @@
+﻿@{
+                /**/
+
+                ViewBag.Title = "Login";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- contact -->
+<script>
+    $(document).ready(function () {
+        $('#active_contact').addClass("active");
+
+    });
+</script>
+<section class="contact py-5">
+    <div class="container" style="margin-top:80px;margin-bottom:50px;">
+        <div class="heading pb-4">
+            <h3 class="heading mb-2 text-center"> <span>Contact </span> Us </h3>
+            @*<p class="para mb-5 text-center">Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id.</p>*@
+        </div>
+        <div class="row contact-agileinfo">
+            @*<div class="col-md-7 contact-right">
+                    <form action="#" method="post">
+                        <input type="text" name="Name" placeholder="Name" required="">
+                        <input type="email" class="email" name="Email" placeholder="Email" required="">
+                        <input type="text" name="Phone no" placeholder="Phone" required="">
+                        <textarea name="Message" placeholder="Message" required=""></textarea>
+                        <div class="read mt-3">
+                            <a href="#">Submit <span class="btn ml-2"><i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>
+                        </div>
+                    </form>
+                </div>*@
+            <div class="col-md-4 mt-md-0 mt-5 col-md-offset-4 contact-left">
+
+                <div class="address ">
+                    <h5>Phone:</h5>
+                    <p><span class="fa fa-phone"></span> +27 739007893</p>
+                    @*<p><span class="fa fa-mobile"></span>+1(23) 4567 7891</p>*@
+                </div>
+                <div class="address address-mdl">
+                    <h5>Email:</h5>
+                    <p><span class="fa fa-envelope"></span> <a href="mailto:admin@socialhook.org.za">admin@socialhook.org.za</a></p>
+                    @*<p><span class="fa fa-globe"></span> <a href="mailto:website@example.com">website@example.com</a></p>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- //contact -->
+
+<div class="cpy-right text-center" style="position:fixed;bottom:0;width:100%">
+    <p>© 2019 SCALL. All Rights Reserved | Design by <a href="https://sixstepsolutioon.co.za/" target="_blank">Six Step Solution</a></p>
+</div>

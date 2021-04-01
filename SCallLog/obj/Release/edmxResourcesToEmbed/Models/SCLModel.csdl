@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="scallModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SCL_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="DEPARTMENT_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CATEGORY_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CATEGORY_DESC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Step1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Step2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_CompanyRegistration">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="company_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_uniqueID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_mobile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="first_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="SubscriptionEndDate" Type="DateTime" Precision="0" />
+    <Property Name="Flag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProfilePicture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SCL_ComplaintImages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Complaint_ID" Type="Int32" />
+    <Property Name="AttachmentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="AttachmentBinary" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="AttachmentRealName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Device" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GeneratedAttachmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Complaint_ReferenceNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_ComplaintsAllocated">
+    <Key>
+      <PropertyRef Name="CAID" />
+    </Key>
+    <Property Name="CAID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="CompID" Type="Int32" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContactTime" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ContactDate" Type="DateTime" Precision="0" />
+    <Property Name="ContactTo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Flag" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="SCL_Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telephone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PwdChange" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailNotify" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SMSNotify" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="DEPARTMENT_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPARTMENT_DESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Step1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Step2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_Login">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CID" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cdate" Type="DateTime" Precision="3" />
+    <Property Name="Flag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SubscriptionEndDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="SCL_Mobile_Complaints_Audit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Complaint_ReferenceNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Complaint_ID" Type="Int32" />
+    <Property Name="Complaint_Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Category_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category_Desc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SubCategory_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SubCategory_Desc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dept_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dept_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ComplaintStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Lattitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Longitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="img_data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="automatic_complaint" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="userID" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_Sub_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="CATEGORY_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SUB_CATEGORY_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SUB_CATEGORY_DESC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Step1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Step2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_UserDepartments">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SCL_UserRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SCL_UserRoleScreenMapping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="ScreenID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="SCL_Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserPass" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProfilePicture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PIN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PwdChange" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="userType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_UsersAudit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserPass" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProfilePicture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PIN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AuditCreatedBy" Type="Int32" />
+    <Property Name="AuditCreatedDateTime" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="SCL_UserScreens">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ScreenName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SCL_UserwiseScreenMapping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="ScreenID" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="scallEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SCL_Category" EntityType="Self.SCL_Category" />
+    <EntitySet Name="SCL_CompanyRegistration" EntityType="Self.SCL_CompanyRegistration" />
+    <EntitySet Name="SCL_ComplaintImages" EntityType="Self.SCL_ComplaintImages" />
+    <EntitySet Name="SCL_ComplaintsAllocated" EntityType="Self.SCL_ComplaintsAllocated" />
+    <EntitySet Name="SCL_Customer" EntityType="Self.SCL_Customer" />
+    <EntitySet Name="SCL_Department" EntityType="Self.SCL_Department" />
+    <EntitySet Name="SCL_Login" EntityType="Self.SCL_Login" />
+    <EntitySet Name="SCL_Mobile_Complaints_Audit" EntityType="Self.SCL_Mobile_Complaints_Audit" />
+    <EntitySet Name="SCL_Sub_Category" EntityType="Self.SCL_Sub_Category" />
+    <EntitySet Name="SCL_UserDepartments" EntityType="Self.SCL_UserDepartments" />
+    <EntitySet Name="SCL_UserRoles" EntityType="Self.SCL_UserRoles" />
+    <EntitySet Name="SCL_UserRoleScreenMapping" EntityType="Self.SCL_UserRoleScreenMapping" />
+    <EntitySet Name="SCL_Users" EntityType="Self.SCL_Users" />
+    <EntitySet Name="SCL_UsersAudit" EntityType="Self.SCL_UsersAudit" />
+    <EntitySet Name="SCL_UserScreens" EntityType="Self.SCL_UserScreens" />
+    <EntitySet Name="SCL_UserwiseScreenMapping" EntityType="Self.SCL_UserwiseScreenMapping" />
+    <FunctionImport Name="sp_getComplaintHistoryByRefNo" ReturnType="Collection(scallModel.sp_getComplaintHistoryByRefNo_Result)">
+      <Parameter Name="RefNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getComplaintHistoryByRefNumber" ReturnType="Collection(scallModel.sp_getComplaintHistoryByRefNumber_Result)">
+      <Parameter Name="RefNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getDashboardData" ReturnType="Collection(scallModel.sp_getDashboardData_Result)">
+      <Parameter Name="RefNumber" Mode="In" Type="String" />
+      <Parameter Name="CompanyID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getDashboardData1" ReturnType="Collection(scallModel.sp_getDashboardData1_Result)">
+      <Parameter Name="CompanyID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getComplaintCountsByMonthWise" ReturnType="Collection(scallModel.sp_getComplaintCountsByMonthWise_Result)">
+      <Parameter Name="Year" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+      <Parameter Name="CompanyID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getComplaintCountsByDepartmentWise" ReturnType="Collection(scallModel.sp_getComplaintCountsByDepartmentWise_Result)">
+      <Parameter Name="Department" Mode="In" Type="String" />
+      <Parameter Name="CompanyID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="SCL_Mobile_Complaints" EntityType="scallModel.SCL_Mobile_Complaints" />
+    <FunctionImport Name="sp_getJobCardHistoryByRefNumber" ReturnType="Collection(scallModel.sp_getJobCardHistoryByRefNumber_Result)">
+      <Parameter Name="RefNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="SCL_JobCards" EntityType="scallModel.SCL_JobCards" />
+    <EntitySet Name="SCL_Comp_Status" EntityType="scallModel.SCL_Comp_Status" />
+    <EntitySet Name="SCL_WorkOrder_Details" EntityType="scallModel.SCL_WorkOrder_Details" />
+    <EntitySet Name="SCL_WorkOrder_Master" EntityType="scallModel.SCL_WorkOrder_Master" />
+  </EntityContainer>
+  <ComplexType Name="sp_getComplaintHistoryByRefNo_Result">
+    <Property Type="String" Name="Complaint_ReferenceNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Complaint_Date" Nullable="true" />
+    <Property Type="String" Name="Category_Desc" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="SubCategory_Desc" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Dept_Desc" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ComplaintStatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="automatic_complaint" Nullable="true" />
+    <Property Type="String" Name="Comments" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_getComplaintHistoryByRefNumber_Result">
+    <Property Type="String" Name="Complaint_ReferenceNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Complaint_Date" Nullable="true" />
+    <Property Type="String" Name="Category_Desc" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="SubCategory_Desc" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Dept_Desc" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ComplaintStatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="automatic_complaint" Nullable="true" />
+    <Property Type="String" Name="Comments" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="aFirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="aLastName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_getDashboardData_Result">
+    <Property Type="String" Name="ComplaintStatus" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getDashboardData1_Result">
+    <Property Type="String" Name="ComplaintStatus" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getComplaintCountsByMonthWise_Result">
+    <Property Type="Int32" Name="month" Nullable="true" />
+    <Property Type="Int32" Name="count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getComplaintCountsByDepartmentWise_Result">
+    <Property Type="String" Name="Dept_Desc" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ComplaintStatus" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="count" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="SCL_Mobile_Complaints">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Complaint_ReferenceNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Complaint_Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Category_Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category_Desc" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubCategory_Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubCategory_Desc" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Dept_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dept_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ComplaintStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Lattitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Longitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="img_data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="automatic_complaint" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="userID" Type="Int32" />
+    <Property Name="AllocateduserID" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="JC_REF" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="sp_getJobCardHistoryByRefNumber_Result">
+    <Property Type="String" Name="Complaint_ReferenceNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Complaint_Date" Nullable="true" />
+    <Property Type="String" Name="Category_Desc" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="SubCategory_Desc" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Dept_Desc" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ComplaintStatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="automatic_complaint" Nullable="true" />
+    <Property Type="String" Name="Comments" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="aFirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="aLastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JC_REFERENCE" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="JC_DATE" Nullable="true" Precision="16" />
+  </ComplexType>
+  <EntityType Name="SCL_JobCards">
+    <Key>
+      <PropertyRef Name="JCID" />
+    </Key>
+    <Property Name="JCID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JC_REFERENCE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JC_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="COMP_REFERENCE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_DATE" Type="DateTime" Precision="0" />
+    <Property Name="COMPANY_ID" Type="Int32" Nullable="false" />
+    <Property Name="COMPLAINT_ID" Type="Int32" Nullable="false" />
+    <Property Name="USER_ID" Type="Int32" Nullable="false" />
+    <Property Name="DEPARTMENT" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CATEGORY" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SUB_CATEGORY" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_STATUS" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_COMMENTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FLAG" Type="Int32" />
+    <Property Name="CREATED_BY" Type="Int32" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_BY" Type="Int32" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="START_DATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="END_DATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SERVICE_HOURS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VEHICLE_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JOB_DISTANCE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_Comp_Status">
+    <Key>
+      <PropertyRef Name="STATUS_ID" />
+    </Key>
+    <Property Name="STATUS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STATUS" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ISACTIVE" Type="Int32" />
+    <Property Name="ISDELETED" Type="Int32" />
+    <Property Name="Flag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="MODIFIEDBY" Type="Int32" />
+    <Property Name="MODIFIEDDATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SCL_WorkOrder_Details">
+    <Key>
+      <PropertyRef Name="WODID" />
+    </Key>
+    <Property Name="WODID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WOID" Type="Int32" Nullable="false" />
+    <Property Name="WO_REFERENCE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WO_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="JC_REFERENCE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_DATE" Type="DateTime" Precision="0" />
+    <Property Name="COMPANY_ID" Type="Int32" Nullable="false" />
+    <Property Name="COMPLAINT_ID" Type="Int32" Nullable="false" />
+    <Property Name="USER_ID" Type="Int32" Nullable="false" />
+    <Property Name="DEPARTMENT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CATEGORY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SUB_CATEGORY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_STATUS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_COMMENTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FLAG" Type="Int32" />
+    <Property Name="CREATED_BY" Type="Int32" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_BY" Type="Int32" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="START_DATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="END_DATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SERVICE_HOURS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SCL_WorkOrder_Master">
+    <Key>
+      <PropertyRef Name="WOID" />
+    </Key>
+    <Property Name="WOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WO_REFERENCE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WO_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="WO_START_TIME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="WO_END_TIME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JC_REFERENCE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_DATE" Type="DateTime" Precision="0" />
+    <Property Name="COMPANY_ID" Type="Int32" Nullable="false" />
+    <Property Name="COMPLAINT_ID" Type="Int32" />
+    <Property Name="USER_ID" Type="Int32" Nullable="false" />
+    <Property Name="START_READING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="END_READING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WO_COMMENTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FLAG" Type="Int32" />
+    <Property Name="CREATED_BY" Type="Int32" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_BY" Type="Int32" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+  </EntityType>
+</Schema>

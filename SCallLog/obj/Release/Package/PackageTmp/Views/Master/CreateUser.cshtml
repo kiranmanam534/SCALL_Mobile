@@ -1,0 +1,637 @@
+﻿
+@{
+    ViewBag.Title = "CreateUser";
+    Layout = "~/Views/Shared/_Layout_SCL.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        $('#active_master').addClass("active selected");
+        $('#active_cr_user').addClass("active");
+
+    });
+</script>
+<script src="~/AngularJS/User/CreateUSer.js"></script>
+<style>
+    /*table */
+    table {
+        border-collapse: collapse;
+    }
+
+        table th, table td {
+            padding: 3px;
+        }
+
+            table th:hover {
+                cursor: pointer;
+            }
+
+    .arrow-down:after, .arrow-up:after {
+        content: ' ';
+        position: relative;
+        left: 5px;
+        border: 6px solid transparent;
+    }
+
+    .arrow-down:after {
+        top: 12px;
+        border-top-color: black;
+    }
+
+    .arrow-up:after {
+        bottom: 15px;
+        border-bottom-color: black;
+    }
+
+    .arrow-down, .arrow-up {
+        padding-right: 10px;
+    }
+
+    .anchor_sorting {
+        text-decoration: none;
+        color: #fff !important;
+    }
+
+        .anchor_sorting:hover {
+            color: #fff !important;
+        }
+
+    .btn-md-80 {
+        width: 90px !important;
+    }
+
+    .error {
+        color: red;
+        border-color: red;
+    }
+
+    a.disabledInvisible {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .required_image {
+        width: 7px;
+        margin-top: -10px;
+    }
+
+    input[type='text'] {
+        height: 30px;
+    }
+
+    .add-on {
+        height: 100%;
+    }
+
+    .pagination {
+        height: 40px;
+        margin: 20px 0;
+    }
+
+        .pagination ul {
+            display: inline-block;
+            margin-left: 0;
+            margin-bottom: 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+            .pagination ul > li {
+                display: inline;
+            }
+
+                .pagination ul > li:first-child > a, .pagination ul > li:first-child > span {
+                    border-left-width: 1px;
+                    -webkit-border-radius: 3px 0 0 3px;
+                    -moz-border-radius: 3px 0 0 3px;
+                    border-radius: 3px 0 0 3px;
+                }
+
+                .pagination ul > li > a, .pagination ul > li > span {
+                    float: left;
+                    padding: 0 14px;
+                    line-height: 38px;
+                    text-decoration: none;
+                    background-color: #ffffff;
+                    border: 1px solid #dddddd;
+                    border-left-width: 0;
+                }
+
+            .pagination ul > .active > a, .pagination ul > .active > span {
+                color: #999999;
+                cursor: default;
+                background: gainsboro;
+            }
+
+    .gutter {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .container-fluid {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .center-text {
+        text-align: center !important;
+    }
+</style>
+
+
+
+<div class="wrapper" ng-controller="MasterCtrl" ng-cloak>
+
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                User
+                <small>Add User</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">User</li>
+            </ol>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Horizontal Form -->
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Add User</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form class="form-horizontal" name="kpaForm">
+                            <div class="panel-body">
+
+                                <div id="defaultForm" method="post" action="#" class="form-horizontal bv-form" novalidate="novalidate">
+
+                                    <fieldset style="margin-bottom: 10px;">
+
+                                        <div class="col-lg-6" style="margin: 10px auto;">
+                                            <div class="col-lg-4" style="margin-top: 10px;">
+                                                First Name
+                                            </div>
+
+                                            <div class="col-lg-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-sort-alpha-asc"></i>
+                                                    </span>
+                                                    <input style="height: 40px;" type="text" id="FirstName" class="form-control" placeholder="First Name" name="FirstName"
+                                                           ng-model="CreateNewUserData.FirstName" ng-class="{error: showMsgs && CreateNewUserForm.FirstName.$error.required}"
+                                                           ng-required="capturePanel">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6" style="margin: 10px auto;">
+                                            <div class="col-lg-4" style="margin-top: 10px;">
+                                                Last Name
+                                            </div>
+
+                                            <div class="col-lg-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-sort-alpha-asc"></i>
+                                                    </span>
+                                                    <input style="height: 40px;" type="text" id="LastName" class="form-control" placeholder="Last Name" name="LastName"
+                                                           ng-model="CreateNewUserData.LastName" ng-class="{error: showMsgs && CreateNewUserForm.LastName.$error.required}"
+                                                           ng-required="capturePanel">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-6" style="margin: 10px auto;">
+                                            <div class="col-lg-4" style="margin-top: 10px;">
+                                                Department
+                                            </div>
+
+                                            <div class="col-lg-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="glyphicon glyphicon-user"></i>
+                                                    </span>
+                                                    @*<select class="form-control" id="DepartmentID" name="DepartmentID" ng-model="CreateNewUserData.DepartmentID"
+                                                                ng-class="{error: showMsgs && CreateNewUserForm.DepartmentID.$error.required}" ng-required="capturePanel">
+                                                            <option selected="selected" value="">--Please Select--</option>
+                                                            <option ng-repeat="d in DepartmentsList" ng-value="d.DepartmentID">{{d.DepartmentName}}</option>
+                                                        </select>*@
+                                                    <input type="hidden" ng-model="CreateNewUserData.DepartmentID" class="form-control" placeholder="Last Name" name="LastName" />
+                                                    <input type="text" ng-click="setDeptData()" ng-model="CreateNewUserData.DeptName" class="form-control" placeholder="Department Name" name="LastName" readonly />
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6" style="margin: 10px auto;">
+                                            <div class="col-lg-4" style="margin-top: 10px;">
+                                                Role
+                                            </div>
+
+                                            <div class="col-lg-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="glyphicon glyphicon-user"></i>
+                                                    </span>
+
+                                                    <select class="form-control" id="RoleID" name="RoleID"
+                                                            ng-model="CreateNewUserData.RoleID"
+                                                            ng-class="{error: showMsgs && CreateNewUserForm.RoleID.$error.required}"
+                                                            ng-required="capturePanel">
+                                                        <option selected="selected" value="">--Please Select--</option>
+                                                        <option ng-repeat="d in RolesList" ng-value="d.ID">{{d.RoleName}}</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12" style="margin: 10px auto;">
+                                            <div class="col-lg-2" style="margin-top: 10px;">
+                                                Email
+                                            </div>
+
+                                            <div class="col-lg-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </span>
+                                                    <input style="height: 40px;" autocomplete="new-password" type="email" id="EmailID" class="form-control" placeholder="Email" name="EmailID"
+                                                           ng-model="CreateNewUserData.EmailID" ng-class="{error: showMsgs && CreateNewUserForm.EmailID.$error.required}"
+                                                           ng-required="capturePanel">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-6" style="margin: 10px auto;">
+                                            <div class="col-lg-4" style="margin-top: 10px;">
+                                                Password
+                                            </div>
+
+                                            <div class="col-lg-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-sort-alpha-asc"></i>
+                                                    </span>
+                                                    <input style="height: 40px;" autocomplete="new-password" type="password" class="form-control" placeholder="Password" name="password"
+                                                           ng-model="password" ng-pattern="passwordPattern" required>
+                                                </div>
+                                                <small>
+                                                    Password should be at least 8 characters
+                                                    long and should contain one number,one character and one special
+                                                    character
+                                                </small>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6" style="margin: 10px auto;">
+                                            <div class="col-lg-4" style="margin-top: 10px;">
+                                                Confirm Password
+                                            </div>
+
+                                            <div class="col-lg-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-sort-alpha-asc"></i>
+                                                    </span>
+                                                    <input style="height: 40px;" type="password" class="form-control" placeholder="Confirm Password" name="cpassword"
+                                                           ng-model="cpassword" ng-class="{error: showMsgs && CreateNewUserForm.cpassword.$error.required}"
+                                                           ng-required="capturePanel">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-12" style="margin: 10px auto;">
+                                            <div class="col-lg-2" style="margin-top: 10px;">
+                                                Upload Profile Picture
+                                            </div>
+
+                                            <div class="col-lg-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-upload"></i>
+                                                    </span>
+                                                    <input type="file" id="Attachment" accept="image/*" class="form-control" placeholder="Attachment" name="Attachment" ng-model="Attachment">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <button type="button" id="loading-btn" class="btn btn-success" ng-click="UploadAttachment()" style="height: 40px;width: 100%;"><img src="~/Assets/pms_loader.gif" style="width:20px;height:20px;" ng-show="UploadAttachmentLoader" />Upload</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12" style="margin: 10px auto;">
+                                            <div class="col-lg-2" style="margin-top: 10px;">
+                                                Uploaded Picture
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <table class="table table-striped table-bordered table-hover tabel-condensed">
+                                                    <tbody id="AttachmentsList">
+                                                        <tr ng-repeat="a in AttachmentFiles">
+                                                            <td>
+                                                                {{a.name}}
+                                                            </td>
+                                                            <td style="width: 50px;">
+                                                                <a href="" ng-click="RemoveAttachment($index)"><i class="fa fa-times"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+
+                                    </fieldset>
+
+                                    <div class="center-text">
+                                        <button type="button" id="loading-btn" class="btn btn-success" ng-click="SaveNewUser(CreateNewUserData,password,cpassword)"><img src="~/Assets/pms_loader.gif" style="width:20px;height:20px;" ng-show="imgLoader_Save" />{{SaveType}}</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="container-fluid" ng-cloak>
+                        <div class="containerif">
+                            <div style="background-color:#fff;height:auto;" id="tblCaseDetails">
+                                <div class="row gutter">
+                                    <div class="panel-heading">
+                                        <h4>Users per page</h4>
+                                        <span class="form-group page-size form-inline">
+                                            <select id="ddlPageSize" class="form-control control-color"
+                                                    ng-model="pageSizeSelected"
+                                                    ng-change="changePageSize()" style="height:33px">
+
+                                                <option value="2">2</option>
+                                                <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                            </select>
+                                        </span>
+                                        <div class="col-md-4 pull-right" style="margin-top:-5px;">
+                                            <div class="form-group">
+
+                                                <div class="input-group">
+
+                                                    <input type="text" ng-model="search" ng-change="SerachMethod(search)" class="form-control" placeholder="Search">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-search"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div ng-show="showLoader" class="text-center">
+                                        <span class="fa fa-spin fa-spinner fa-2x"></span>
+                                    </div>
+                                    <div class="panel-body" ng-show="showTable">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover tabel-condensed">
+                                                <thead style="background-color:#3C8DBC !important;border-collapse:collapse;color:#fff !important">
+                                                    <tr>
+                                                        <th>S.No</th>
+                                                        <th ng-click="sort('Firstname')" ng-class="sortClass('Firstname')"><a class="anchor_sorting" href="">First Name</a>&nbsp;</th>
+                                                        <th ng-click="sort('Lastname')" ng-class="sortClass('Lastname')"><a class="anchor_sorting" href="">Last Name</a>&nbsp;</th>
+                                                        <th ng-click="sort('Department')" ng-class="sortClass('Department')"><a class="anchor_sorting" href="">Department</a>&nbsp;</th>
+                                                        <th ng-click="sort('Role')" ng-class="sortClass('Role')"><a class="anchor_sorting" href="">Role</a>&nbsp;</th>
+                                                        <th ng-click="sort('Username')" ng-class="sortClass('Username')"><a class="anchor_sorting" href="">Username</a>&nbsp;</th>
+                                                        <th ng-click="sort('Email')" ng-class="sortClass('Email')"><a class="anchor_sorting" href="">Email</a>&nbsp;</th>
+
+                                                        <th>Edit</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="item in users">
+                                                        <td>{{$index+1}}</td>
+                                                        <td>{{item.FirstName}}</td>
+                                                        <td>{{item.LastName}}</td>
+                                                        <td>{{item.DepartmentName}}</td>
+                                                        <td>{{item.RoleName}}</td>
+                                                        <td>{{item.UserName}}</td>
+                                                        <td>{{item.EmailID}}</td>
+
+                                                        <td>
+                                                            <a ng-click="EditUser(item.ID)" href="" data-target="#myModal" data-toggle="modal"><i class="fa fa-pencil-square-o"></i></a>
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td align="center" colspan="7">
+                                                            <div class="pull-left">
+                                                                <a class="btn btn-primary">Page: {{pageIndex}} / {{numPages}}</a>
+                                                            </div>
+                                                            <div class="pull-right">
+                                                                <pagination total-items="totalCount" ng-change="pageChanged()" items-per-page="pageSizeSelected" direction-links="true" ng-model="pageIndex" max-size="maxSize" class="pagination" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Update User</h4>
+                </div>
+                <div class="modal-body">
+                    <label>First Name</label>
+                    <input type="hidden" ng-model="UsrID" />
+                    <input type="text" ng-model="CreateNewUserData.FirstName" class="form-control" placeholder="First Name" name="FirstName" />
+                    <label>Last Name</label>
+                    <input type="text" ng-model="CreateNewUserData.LastName" class="form-control" placeholder="Last Name" name="LastName" />
+                    <label>Department</label>
+                    <select class="form-control" id="DepartmentID" name="DepartmentID" ng-model="CreateNewUserData.DepartmentID"
+                            ng-class="{error: showMsgs && UpdUser.DepartmentID.$error.required}" ng-required="capturePanel">
+                        <option selected="selected" value="">--Please Select--</option>
+                        <option ng-repeat="d in DepartmentsList" ng-value="d.ID">{{d.DEPARTMENT_DESC}}</option>
+                        @*<option ng-repeat="d in DepartmentsList" ng-value="d.ID">{{d.DEPARTMENT_DESC}}</option>*@
+                    </select>
+
+
+                    <label>Role</label>
+                    <select class="form-control" id="RoleID" name="RoleID"
+                            ng-model="CreateNewUserData.RoleID"
+                            ng-class="{error: showMsgs && CreateNewUserForm.RoleID.$error.required}"
+                            ng-required="capturePanel">
+                        <option selected="selected" value="">--Please Select--</option>
+                        <option ng-repeat="d in RolesList" ng-value="d.ID">{{d.RoleName}}</option>
+                    </select>
+                    <label>Email</label>
+                    <input type="email" ng-model="CreateNewUserData.EmailID" class="form-control" readonly />
+                    <div ng-if="SaveType == 'Update'" class="col-lg-12" style="margin: 10px auto;">
+                        <div class="col-lg-2" style="margin-top: 10px;">
+                            Previous Picture
+                        </div>
+
+                        <div class="col-lg-4">
+                            <img ng-if="CreateNewUserData.ProfilePicture == '' || CreateNewUserData.ProfilePicture == null || CreateNewUserData.ProfilePicture == undefined"
+                                 src='~/Assets/img/Default_avatar.jpg'
+                                 style="max-width: 100px"
+                                 alt="User Profile Picture">
+                            <img ng-if="CreateNewUserData.ProfilePicture != '' && CreateNewUserData.ProfilePicture != null && CreateNewUserData.ProfilePicture != undefined"
+                                 src='../Attachments/{{CreateNewUserData.ProfilePicture}}'
+                                 style="max-width: 100px"
+                                 alt="User Profile Picture">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12" style="margin: 10px auto;">
+                        <div class="col-lg-2" style="margin-top: 10px;">
+                            Upload Profile Picture
+                        </div>
+
+                        <div class="col-lg-8">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="icon icon-file_upload"></i>
+                                </span>
+                                <input type="file" id="Attachment" class="form-control" placeholder="Attachment" name="Attachment" ng-model="Attachment">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <button type="button" id="loading-btn" class="btn btn-success" ng-click="UploadAttachment()" style="height: 40px;width: 100%;"><img src="~/Assets/img/loader1.gif" style="width:20px;height:20px;" ng-show="UploadAttachmentLoader" />Upload</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12" style="margin: 10px auto;">
+                        <div class="col-lg-2" style="margin-top: 10px;">
+                            Uploaded Picture
+                        </div>
+
+                        <div class="col-lg-4">
+                            <table class="table table-striped table-bordered table-hover tabel-condensed">
+                                <tbody id="AttachmentsList">
+                                    <tr ng-repeat="a in AttachmentFiles">
+                                        <td>
+                                            {{a.name}}
+                                        </td>
+                                        <td style="width: 50px;">
+                                            <a href="" ng-click="RemoveAttachment($index)"><img style="margin-top: 0;width: 20px;" src="../Assets/img/Delete.png"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" ng-click="updateUser(CreateNewUserData)"><i class="fa fa-save" ng-hide="imgLoader_Save"></i><img src="~/Assets/pms_loader.gif" style="width:20px;height:20px;" ng-show="imgLoader_Save" /> {{SaveType}}</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close"></i> Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal1" modal="showModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form name="getTargetValueForm" novalidate>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Users</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div style="height:300px;overflow-x:hidden;overflow-y:auto">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Department</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr ng-click="setDepartment(dept)" style="cursor:pointer" ng-repeat="dept in DepartmentsList">
+                                        <td>
+                                            {{ dept.DEPARTMENT_DESC }}
+
+
+                                        </td>
+                                        <td>
+                                            {{ dept.Status }}
+                                        </td>
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        @*<div class="form-group">
+                                <input type="submit" class="btn btn-primary addnew pull-right" style="margin-right:40px;" value="Add Range">
+                            </div>*@
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+

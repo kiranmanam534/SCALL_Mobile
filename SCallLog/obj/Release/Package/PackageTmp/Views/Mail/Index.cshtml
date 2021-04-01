@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_SCL.cshtml";
+}
+<style>
+  #map {
+        height: 500px;
+        width: 100%;
+    }
+</style>
+
+<script src="~/AngularJS/index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG4Tc5v-7PBF4JO-6NKx2aX0xDNCZ4BVM&sensor=false&libraries=places"></script>
+<div class="wrapper" ng-controller="MapCTRL" ng-cloak>
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                Complaint
+                <small>Assigned Complaints</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">User</li>
+            </ol>
+        </section>
+
+        <section class="content">
+            <div class="row">
+                <div id="map"></div>
+            </div>
+
+        </section>
+    </div>
+
+
+</div>

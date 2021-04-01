@@ -1,0 +1,474 @@
+﻿
+@{
+    ViewBag.Title = "MainIndex";
+    Layout = "~/Views/Shared/_Layout_SCL.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        $('#active_dash').addClass("active selected");
+
+    });
+</script>
+<script src="~/AngularJS/main_dashboard.js"></script>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" ng-controller="MainDashBoardCtrl" ng-cloak>
+    <!-- Content Header (Page header) -->
+   
+    <!-- Main content -->
+    <section class="content">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><i class="fa fa-comments"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Received</span>
+                        <span class="info-box-number">{{Receieved}}</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="fa fa-comment"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Assigned</span>
+                        <span class="info-box-number">{{Assigned}}</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <!-- fix for small devices only -->
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-yellow"><i class="fa fa-comment"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">InProgress</span>
+                        <span class="info-box-number">{{InProgress}}</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-green"><i class="fa fa-comments"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Completed</span>
+                        <span class="info-box-number">{{Completed}}</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+        </div>
+
+        @*<div ng-if="showLoader">
+            <img src="~/Assets/pms_loader.gif" style="margin-left:43%" />
+
+        </div>*@
+
+        <div class="row" @*ng-if="!showLoader"*@>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="box">
+                            <div class="box-header with-border" ng-init="getAreaChartByYear(year)">
+                                <h3 class="box-title">Monthly Complaint Report</h3>
+                                <div class="box-tools pull-right">
+                                    <select class="form-control" name="year" ng-model="year" ng-change="getAreaChartByYear(year)">
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <p class="text-center">
+                                    <strong>Complaints: 1 Jan, {{year}} - 31 Dec, {{year}}</strong>
+                                </p>
+                                <div class="chart">
+                                    <!-- Sales Chart Canvas -->
+                                    <canvas id="ComplaintByMonthChart" style="height: 180px;"></canvas>
+                                </div>
+                                <!-- /.chart-responsive -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-md-4">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Complaints</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-md-4">
+                                        <ul class="chart-legend clearfix">
+                                            <li><i class="fa fa-circle-o text-red"></i> Received</li>
+                                            <li><i class="fa fa-circle-o text-light-blue"></i> Assigned</li>
+                                            <li><i class="fa fa-circle-o text-yellow"></i> InProgress</li>
+                                            <li><i class="fa fa-circle-o text-aqua"></i> Hold</li>
+                                            <li><i class="fa fa-circle-o text-green"></i> Completed</li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+
+        <div class="row" @*ng-if="!showLoader"*@>
+            <div class="col-md-12">
+                <div class="row">
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">City Parks</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart1" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Electricity</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart2" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Metro Police</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart3" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Roads and Strom Water</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart4" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Solid Waste</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart5" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Water and Sanitation</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart6" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Transport</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart7" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Administration</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart8" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">My Bills</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart9" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Property Rates</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart10" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <!-- /.info-box -->
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Autometic</h3>
+
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="chart-responsive">
+                                            <canvas id="pieChart11" height="300"></canvas>
+                                        </div>
+                                        <!-- ./chart-responsive -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+

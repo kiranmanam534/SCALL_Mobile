@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd7896eea3cd48afa233aa66c3cae160" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="scallModel.SCL_Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_CompanyRegistration" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_ComplaintImages" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_ComplaintsAllocated" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_Customer" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_Department" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_Login" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_Mobile_Complaints_Audit" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_Sub_Category" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_UserDepartments" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_UserRoles" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_UserRoleScreenMapping" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_Users" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_UsersAudit" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_UserScreens" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_UserwiseScreenMapping" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scallModel.SCL_Mobile_Complaints" Width="1.5" PointX="13.375" PointY="7.75" />
+        <EntityTypeShape EntityType="scallModel.SCL_JobCards" Width="1.5" PointX="7.375" PointY="13.75" />
+        <EntityTypeShape EntityType="scallModel.SCL_Comp_Status" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="scallModel.SCL_WorkOrder_Details" Width="1.5" PointX="9.375" PointY="14.75" />
+        <EntityTypeShape EntityType="scallModel.SCL_WorkOrder_Master" Width="1.5" PointX="15.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
