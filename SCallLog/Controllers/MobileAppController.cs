@@ -441,6 +441,9 @@ namespace SCallLog.Controllers
                         Lattitude= complaintResponse.Lattitude,
                         Longitude= complaintResponse.Longitude,
                         Address= complaintResponse.Address,
+                        CompanyID= complaintResponse.companyId,
+                        AllocateduserID = complaintResponse.companyId,
+
                         //img_data=complaintResponse.img_data
                     };
 
