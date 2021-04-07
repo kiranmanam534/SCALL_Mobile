@@ -28,5 +28,7 @@ namespace SCallLog.Models
         public string Device { get; set; }
         public string GeneratedAttachmentName { get; set; }
         public string Complaint_ReferenceNo { get; set; }
+    
+        public virtual SCL_Mobile_Complaints SCL_Mobile_Complaints { get; set; }
     }
 }

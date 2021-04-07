@@ -26,6 +26,7 @@
         <EntityTypeShape EntityType="scallModel.SCL_Comp_Status" Width="1.5" PointX="0.75" PointY="14.75" />
         <EntityTypeShape EntityType="scallModel.SCL_WorkOrder_Details" Width="1.5" PointX="9.375" PointY="14.75" />
         <EntityTypeShape EntityType="scallModel.SCL_WorkOrder_Master" Width="1.5" PointX="15.375" PointY="0.75" />
+        <AssociationConnector Association="scallModel.FK__SCL_Compl__Compl__6754599E" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

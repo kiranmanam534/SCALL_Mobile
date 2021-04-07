@@ -397,6 +397,18 @@
     <Property Name="MODIFIED_BY" Type="int" />
     <Property Name="MODIFIED_DATE" Type="smalldatetime" />
   </EntityType>
+  <Association Name="FK__SCL_Compl__Compl__6754599E">
+    <End Role="SCL_Mobile_Complaints" Type="Self.SCL_Mobile_Complaints" Multiplicity="0..1" />
+    <End Role="SCL_ComplaintImages" Type="Self.SCL_ComplaintImages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCL_Mobile_Complaints">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SCL_ComplaintImages">
+        <PropertyRef Name="Complaint_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="sp_getComplaintCountsByDepartmentWise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Department" Type="varchar" Mode="In" />
     <Parameter Name="CompanyID" Type="int" Mode="In" />
@@ -444,5 +456,9 @@
     <EntitySet Name="SCL_UserwiseScreenMapping" EntityType="Self.SCL_UserwiseScreenMapping" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SCL_WorkOrder_Details" EntityType="Self.SCL_WorkOrder_Details" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SCL_WorkOrder_Master" EntityType="Self.SCL_WorkOrder_Master" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__SCL_Compl__Compl__6754599E" Association="Self.FK__SCL_Compl__Compl__6754599E">
+      <End Role="SCL_Mobile_Complaints" EntitySet="SCL_Mobile_Complaints" />
+      <End Role="SCL_ComplaintImages" EntitySet="SCL_ComplaintImages" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -2,6 +2,8 @@
 using SCallLog.Models.Packages;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -302,7 +304,39 @@ namespace SCallLog.Controllers
 
                         var res = new MobileAppResponse<SCL_Mobile_Complaints>()
                         {
-                            all = userComplaints,
+                            all = userComplaints.AsEnumerable().Select(s => new SCL_Mobile_Complaints
+                            {
+                                ID = s.ID,
+                                Complaint_ReferenceNo = s.Complaint_ReferenceNo,
+                                Complaint_Date = s.Complaint_Date,
+                                Category_Id = s.Category_Id,
+                                Category_Desc = s.Category_Desc,
+                                SubCategory_Id = s.SubCategory_Id,
+                                SubCategory_Desc = s.SubCategory_Desc,
+                                Dept_Id = s.Dept_Id,
+                                Dept_Desc = s.Dept_Desc,
+                                FirstName = s.FirstName,
+                                LastName = s.LastName,
+                                MobileNo = s.MobileNo,
+                                Email = s.Email,
+                                Address = s.Address,
+                                FileName = s.FileName,
+                                CreatedBy = s.CreatedBy,
+                                CreatedDate = s.CreatedDate,
+                                ModifiedBy = s.ModifiedBy,
+                                ModifiedDate = s.ModifiedDate,
+                                ComplaintStatus = s.ComplaintStatus,
+                                Lattitude = s.Lattitude,
+                                Longitude = s.Longitude,
+                                img_data = s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? "https://propertymanagement-vas.azurewebsites.net/Attachments/" + s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
+                                automatic_complaint = s.automatic_complaint,
+                                userID = s.userID,
+                                AllocateduserID = s.AllocateduserID,
+                                Comments = s.Comments,
+                                CompanyID = s.CompanyID,
+                                JC_REF = s.JC_REF,
+
+                            }).AsQueryable(),
                             statusCode = 200
                         };
 
@@ -315,7 +349,39 @@ namespace SCallLog.Controllers
 
                         var res = new MobileAppResponse<SCL_Mobile_Complaints>()
                         {
-                            all = compComplaints,
+                            all = compComplaints.AsEnumerable().Select(s => new SCL_Mobile_Complaints
+                            {
+                                ID = s.ID,
+                                Complaint_ReferenceNo = s.Complaint_ReferenceNo,
+                                Complaint_Date = s.Complaint_Date,
+                                Category_Id = s.Category_Id,
+                                Category_Desc = s.Category_Desc,
+                                SubCategory_Id = s.SubCategory_Id,
+                                SubCategory_Desc = s.SubCategory_Desc,
+                                Dept_Id = s.Dept_Id,
+                                Dept_Desc = s.Dept_Desc,
+                                FirstName = s.FirstName,
+                                LastName = s.LastName,
+                                MobileNo = s.MobileNo,
+                                Email = s.Email,
+                                Address = s.Address,
+                                FileName = s.FileName,
+                                CreatedBy = s.CreatedBy,
+                                CreatedDate = s.CreatedDate,
+                                ModifiedBy = s.ModifiedBy,
+                                ModifiedDate = s.ModifiedDate,
+                                ComplaintStatus = s.ComplaintStatus,
+                                Lattitude = s.Lattitude,
+                                Longitude = s.Longitude,
+                                img_data =  s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ?"https://propertymanagement-vas.azurewebsites.net/Attachments/" + s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
+                                automatic_complaint = s.automatic_complaint,
+                                userID = s.userID,
+                                AllocateduserID = s.AllocateduserID,
+                                Comments = s.Comments,
+                                CompanyID = s.CompanyID,
+                                JC_REF = s.JC_REF,
+
+                            }).AsQueryable(),
                             statusCode = 200
                         };
 
@@ -392,13 +458,6 @@ namespace SCallLog.Controllers
                     statusCode = 500,
                 }, JsonRequestBehavior.AllowGet);
             }
-
-            return Json(new MobileAppResponse<string>()
-            {
-
-                message = "No data found!",
-                statusCode = 403,
-            }, JsonRequestBehavior.AllowGet);
         }
 
 
@@ -426,34 +485,39 @@ namespace SCallLog.Controllers
 
                     SCL_Mobile_Complaints complaint = new SCL_Mobile_Complaints
                     {
-                        Complaint_ReferenceNo=refNumber,
-                        Complaint_Date=dt.ToString(),
-                        CreatedDate=dt,
-                        ComplaintStatus= "Received",
-                        CreatedBy= complaintResponse.loggedId.ToString(),
-                        Comments= complaintResponse.comments,
-                        Dept_Id= complaintResponse.Dept_Id,
-                        Dept_Desc= complaintResponse.Dept_Desc,
-                        Category_Id= complaintResponse.Category_Id,
-                        Category_Desc= complaintResponse.Category_Desc,
-                        SubCategory_Id= complaintResponse.SubCategory_Id,
-                        SubCategory_Desc= complaintResponse.SubCategory_Desc,
-                        Lattitude= complaintResponse.Lattitude,
-                        Longitude= complaintResponse.Longitude,
-                        Address= complaintResponse.Address,
-                        CompanyID= complaintResponse.companyId,
-                        AllocateduserID = complaintResponse.companyId,
-
-                        //img_data=complaintResponse.img_data
+                        Complaint_ReferenceNo = refNumber,
+                        Complaint_Date = dt.ToString(),
+                        CreatedDate = dt,
+                        ComplaintStatus = "Received",
+                        CreatedBy = complaintResponse.loggedId.ToString(),
+                        Comments = complaintResponse.comments,
+                        Dept_Id = complaintResponse.Dept_Id,
+                        Dept_Desc = complaintResponse.Dept_Desc,
+                        Category_Id = complaintResponse.Category_Id,
+                        Category_Desc = complaintResponse.Category_Desc,
+                        SubCategory_Id = complaintResponse.SubCategory_Id,
+                        SubCategory_Desc = complaintResponse.SubCategory_Desc,
+                        Lattitude = complaintResponse.Lattitude,
+                        Longitude = complaintResponse.Longitude,
+                        Address = complaintResponse.Address,
+                        CompanyID = complaintResponse.companyId,
+                        AllocateduserID = complaintResponse.companyId
                     };
 
 
                     gc.db.SCL_Mobile_Complaints.Add(complaint);
-                    if (gc.db.SaveChanges() > 0) {
+                    if (gc.db.SaveChanges() > 0)
+                    {
+
+
+                        string filename = refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.companyId + ".jpg";
+
+                        bool imge = SaveImage(complaintResponse.img_data, filename);
+
 
                         SCL_ComplaintImages img = new SCL_ComplaintImages();
 
-                        img.AttachmentName = complaintResponse.img_data;
+                        img.AttachmentName = filename;
                         img.Complaint_ID = complaint.ID;
                         img.Complaint_ReferenceNo = refNumber;
                         img.Device = "mobile";
@@ -502,6 +566,41 @@ namespace SCallLog.Controllers
                     statusCode = 500,
                 }, JsonRequestBehavior.AllowGet);
             }
+        }
+
+
+        public Image Base64ToImage(string base64String)
+        {
+            // Convert Base64 String to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+
+            // Convert byte[] to Image
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Image image = Image.FromStream(ms, true);
+
+            return image;
+        }
+
+        public bool SaveImage(string base64String, string imageName)
+        {
+            String path = HttpContext.Server.MapPath("~/Attachments"); //Path
+
+            //Check if directory exist
+            if (!System.IO.Directory.Exists(path))
+            {
+                System.IO.Directory.CreateDirectory(path); //Create directory if it doesn't exist
+            }
+
+
+            //set the image path
+            string imgPath = Path.Combine(path, imageName);
+
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+
+            System.IO.File.WriteAllBytes(imgPath, imageBytes);
+
+            return true;
         }
 
 

@@ -402,6 +402,18 @@
           <Property Name="MODIFIED_BY" Type="int" />
           <Property Name="MODIFIED_DATE" Type="smalldatetime" />
         </EntityType>
+        <Association Name="FK__SCL_Compl__Compl__6754599E">
+          <End Role="SCL_Mobile_Complaints" Type="Self.SCL_Mobile_Complaints" Multiplicity="0..1" />
+          <End Role="SCL_ComplaintImages" Type="Self.SCL_ComplaintImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SCL_Mobile_Complaints">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SCL_ComplaintImages">
+              <PropertyRef Name="Complaint_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="sp_getComplaintCountsByDepartmentWise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Department" Type="varchar" Mode="In" />
           <Parameter Name="CompanyID" Type="int" Mode="In" />
@@ -449,6 +461,10 @@
           <EntitySet Name="SCL_UserwiseScreenMapping" EntityType="Self.SCL_UserwiseScreenMapping" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SCL_WorkOrder_Details" EntityType="Self.SCL_WorkOrder_Details" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SCL_WorkOrder_Master" EntityType="Self.SCL_WorkOrder_Master" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__SCL_Compl__Compl__6754599E" Association="Self.FK__SCL_Compl__Compl__6754599E">
+            <End Role="SCL_Mobile_Complaints" EntitySet="SCL_Mobile_Complaints" />
+            <End Role="SCL_ComplaintImages" EntitySet="SCL_ComplaintImages" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -508,6 +524,7 @@
           <Property Name="Device" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="GeneratedAttachmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Complaint_ReferenceNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SCL_Mobile_Complaints" Relationship="scallModel.FK__SCL_Compl__Compl__6754599E" FromRole="SCL_ComplaintImages" ToRole="SCL_Mobile_Complaints" />
         </EntityType>
         <EntityType Name="SCL_ComplaintsAllocated">
           <Key>
@@ -770,6 +787,10 @@
           <EntitySet Name="SCL_Comp_Status" EntityType="scallModel.SCL_Comp_Status" />
           <EntitySet Name="SCL_WorkOrder_Details" EntityType="scallModel.SCL_WorkOrder_Details" />
           <EntitySet Name="SCL_WorkOrder_Master" EntityType="scallModel.SCL_WorkOrder_Master" />
+          <AssociationSet Name="FK__SCL_Compl__Compl__6754599E" Association="scallModel.FK__SCL_Compl__Compl__6754599E">
+            <End Role="SCL_Mobile_Complaints" EntitySet="SCL_Mobile_Complaints" />
+            <End Role="SCL_ComplaintImages" EntitySet="SCL_ComplaintImages" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_getComplaintHistoryByRefNo_Result">
           <Property Type="String" Name="Complaint_ReferenceNo" Nullable="true" MaxLength="100" />
@@ -851,6 +872,7 @@
           <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CompanyID" Type="Int32" />
           <Property Name="JC_REF" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SCL_ComplaintImages" Relationship="scallModel.FK__SCL_Compl__Compl__6754599E" FromRole="SCL_Mobile_Complaints" ToRole="SCL_ComplaintImages" />
         </EntityType>
         <ComplexType Name="sp_getJobCardHistoryByRefNumber_Result">
           <Property Type="String" Name="Complaint_ReferenceNo" Nullable="true" MaxLength="100" />
@@ -964,6 +986,18 @@
           <Property Name="MODIFIED_BY" Type="Int32" />
           <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
         </EntityType>
+        <Association Name="FK__SCL_Compl__Compl__6754599E">
+          <End Type="scallModel.SCL_Mobile_Complaints" Role="SCL_Mobile_Complaints" Multiplicity="0..1" />
+          <End Type="scallModel.SCL_ComplaintImages" Role="SCL_ComplaintImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SCL_Mobile_Complaints">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SCL_ComplaintImages">
+              <PropertyRef Name="Complaint_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

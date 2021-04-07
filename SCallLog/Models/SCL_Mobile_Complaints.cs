@@ -14,6 +14,12 @@ namespace SCallLog.Models
     
     public partial class SCL_Mobile_Complaints
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SCL_Mobile_Complaints()
+        {
+            this.SCL_ComplaintImages = new HashSet<SCL_ComplaintImages>();
+        }
+    
         public int ID { get; set; }
         public string Complaint_ReferenceNo { get; set; }
         public string Complaint_Date { get; set; }
@@ -43,5 +49,8 @@ namespace SCallLog.Models
         public string Comments { get; set; }
         public Nullable<int> CompanyID { get; set; }
         public string JC_REF { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SCL_ComplaintImages> SCL_ComplaintImages { get; set; }
     }
 }
