@@ -328,7 +328,7 @@ namespace SCallLog.Controllers
                                 ComplaintStatus = s.ComplaintStatus,
                                 Lattitude = s.Lattitude,
                                 Longitude = s.Longitude,
-                                img_data = s.img_data,//s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
+                               // img_data = s.img_data,//s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
                                 automatic_complaint = s.automatic_complaint,
                                 userID = s.userID,
                                 AllocateduserID = s.AllocateduserID,
@@ -373,7 +373,7 @@ namespace SCallLog.Controllers
                                 ComplaintStatus = s.ComplaintStatus,
                                 Lattitude = s.Lattitude,
                                 Longitude = s.Longitude,
-                                img_data = s.img_data,// s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
+                               // img_data = s.img_data,// s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
                                 automatic_complaint = s.automatic_complaint,
                                 userID = s.userID,
                                 AllocateduserID = s.AllocateduserID,
@@ -502,7 +502,7 @@ namespace SCallLog.Controllers
                         Address = complaintResponse.Address,
                         CompanyID = complaintResponse.companyId,
                         AllocateduserID = complaintResponse.companyId,
-                        img_data= refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.companyId + ".jpg"
+                        FileName= refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.companyId + ".jpg"
                     };
 
 
