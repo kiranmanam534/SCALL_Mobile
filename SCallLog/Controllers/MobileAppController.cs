@@ -27,6 +27,8 @@ namespace SCallLog.Controllers
                     {
                         int? compId = 0;
                         string name = "";
+                        int noOfUsers = 0;
+                        int noOfComplints = 0;
                         if (result.type == "USER")
                         {
                             var user = gc.db.SCL_Users.FirstOrDefault(x => x.ID == result.CID);
@@ -34,6 +36,7 @@ namespace SCallLog.Controllers
                             {
                                 compId = user.CompanyID;
                                 name = user.FirstName + " " + user.LastName;
+                                noOfComplints = gc.db.SCL_Mobile_Complaints.Count(x => x.AllocateduserID == result.CID);
                             }
 
                         }
@@ -42,6 +45,8 @@ namespace SCallLog.Controllers
                             compId = result.CID;
                             var company = gc.db.SCL_CompanyRegistration.FirstOrDefault(x => x.CID == result.CID);
                             name = company.company_name;
+                            noOfUsers = gc.db.SCL_Users.Count(x => x.CompanyID == result.CID);
+                            noOfComplints = gc.db.SCL_Mobile_Complaints.Count(x => x.CompanyID == result.CID);
 
                         }
                         var res = new MobileAppResponse<string>()
@@ -50,6 +55,8 @@ namespace SCallLog.Controllers
                             loggedId = result.CID,
                             companyId = compId,
                             name = name,
+                            noOfUsers = noOfUsers,
+                            noOfComplints = noOfComplints,
                             statusCode = 200
                         };
 
@@ -328,7 +335,7 @@ namespace SCallLog.Controllers
                                 ComplaintStatus = s.ComplaintStatus,
                                 Lattitude = s.Lattitude,
                                 Longitude = s.Longitude,
-                               // img_data = s.img_data,//s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
+                                // img_data = s.img_data,//s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
                                 automatic_complaint = s.automatic_complaint,
                                 userID = s.userID,
                                 AllocateduserID = s.AllocateduserID,
@@ -373,7 +380,7 @@ namespace SCallLog.Controllers
                                 ComplaintStatus = s.ComplaintStatus,
                                 Lattitude = s.Lattitude,
                                 Longitude = s.Longitude,
-                               // img_data = s.img_data,// s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
+                                // img_data = s.img_data,// s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
                                 automatic_complaint = s.automatic_complaint,
                                 userID = s.userID,
                                 AllocateduserID = s.AllocateduserID,
@@ -502,7 +509,7 @@ namespace SCallLog.Controllers
                         Address = complaintResponse.Address,
                         CompanyID = complaintResponse.companyId,
                         AllocateduserID = complaintResponse.loggedId,
-                        FileName= refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.loggedId + ".jpg"
+                        FileName = refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.loggedId + ".jpg"
                     };
 
 

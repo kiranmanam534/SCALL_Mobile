@@ -16,6 +16,8 @@ namespace SCallLog.Models
         public int statusCode { get; set; }
         public string name { get; set; }
         public string message { get; set; }
+        public int noOfUsers { get; set; }
+        public int noOfComplints { get; set; }
         public IEnumerable<T> complaintCounts { get; set; }
 
     }
