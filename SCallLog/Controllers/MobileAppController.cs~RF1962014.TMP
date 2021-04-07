@@ -501,8 +501,8 @@ namespace SCallLog.Controllers
                         Longitude = complaintResponse.Longitude,
                         Address = complaintResponse.Address,
                         CompanyID = complaintResponse.companyId,
-                        AllocateduserID = complaintResponse.loggedId,
-                        FileName= refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.loggedId + ".jpg"
+                        AllocateduserID = complaintResponse.companyId,
+                        FileName= refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.companyId + ".jpg"
                     };
 
 
@@ -511,7 +511,7 @@ namespace SCallLog.Controllers
                     {
 
 
-                        string filename = refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.loggedId + ".jpg";
+                        string filename = refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.companyId + ".jpg";
 
                         bool imge = SaveImage(complaintResponse.img_data, filename);
 
