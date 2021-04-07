@@ -302,9 +302,9 @@ namespace SCallLog.Controllers
                     {
                         var userComplaints = gc.db.SCL_Mobile_Complaints.Where(x => x.AllocateduserID == loginId);
 
-                        var res = new MobileAppResponse<SCL_Mobile_Complaints>()
+                        var res = new MobileAppResponse<object>()
                         {
-                            all = userComplaints.AsEnumerable().Select(s => new SCL_Mobile_Complaints
+                            all = userComplaints.AsEnumerable().Select(s => new 
                             {
                                 ID = s.ID,
                                 Complaint_ReferenceNo = s.Complaint_ReferenceNo,
@@ -328,7 +328,7 @@ namespace SCallLog.Controllers
                                 ComplaintStatus = s.ComplaintStatus,
                                 Lattitude = s.Lattitude,
                                 Longitude = s.Longitude,
-                                img_data = s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
+                                AttachmentName = s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
                                 automatic_complaint = s.automatic_complaint,
                                 userID = s.userID,
                                 AllocateduserID = s.AllocateduserID,
@@ -347,9 +347,9 @@ namespace SCallLog.Controllers
                         var compComplaints = gc.db.SCL_Mobile_Complaints.Where(x => x.CompanyID == loginId);
 
 
-                        var res = new MobileAppResponse<SCL_Mobile_Complaints>()
+                        var res = new MobileAppResponse<object>()
                         {
-                            all = compComplaints.AsEnumerable().Select(s => new SCL_Mobile_Complaints
+                            all = compComplaints.AsEnumerable().Select(s => new 
                             {
                                 ID = s.ID,
                                 Complaint_ReferenceNo = s.Complaint_ReferenceNo,
@@ -373,7 +373,7 @@ namespace SCallLog.Controllers
                                 ComplaintStatus = s.ComplaintStatus,
                                 Lattitude = s.Lattitude,
                                 Longitude = s.Longitude,
-                                img_data =  s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
+                                AttachmentName =  s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault() != null ? s.SCL_ComplaintImages.Where(i => i.Complaint_ID == s.ID).FirstOrDefault().AttachmentName : "",
                                 automatic_complaint = s.automatic_complaint,
                                 userID = s.userID,
                                 AllocateduserID = s.AllocateduserID,
