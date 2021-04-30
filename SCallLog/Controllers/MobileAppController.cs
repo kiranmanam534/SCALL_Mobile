@@ -520,17 +520,21 @@ namespace SCallLog.Controllers
 
                         string filename = refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.loggedId + ".jpg";
 
-                        bool imge = SaveImage(complaintResponse.img_data, filename);
+                        if (!string.IsNullOrEmpty(complaintResponse.img_data))
+                        {
+                            bool imge = SaveImage(complaintResponse.img_data, filename);
 
 
-                        SCL_ComplaintImages img = new SCL_ComplaintImages();
+                            SCL_ComplaintImages img = new SCL_ComplaintImages();
 
-                        img.AttachmentName = filename;
-                        img.Complaint_ID = complaint.ID;
-                        img.Complaint_ReferenceNo = refNumber;
-                        img.Device = "mobile";
-                        gc.db.SCL_ComplaintImages.Add(img);
-                        gc.db.SaveChanges();
+                            img.AttachmentName = filename;
+                            img.Complaint_ID = complaint.ID;
+                            img.Complaint_ReferenceNo = refNumber;
+                            img.Device = "mobile";
+                            gc.db.SCL_ComplaintImages.Add(img);
+                            gc.db.SaveChanges();
+                        }
+                       
 
 
                         var res = new MobileAppResponse<string>()
