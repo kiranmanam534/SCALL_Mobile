@@ -517,13 +517,11 @@ namespace SCallLog.Controllers
                     if (gc.db.SaveChanges() > 0)
                     {
 
-
                         string filename = refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.loggedId + ".jpg";
 
                         if (!string.IsNullOrEmpty(complaintResponse.img_data))
                         {
                             bool imge = SaveImage(complaintResponse.img_data, filename);
-
 
                             SCL_ComplaintImages img = new SCL_ComplaintImages();
 
