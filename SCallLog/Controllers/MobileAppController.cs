@@ -518,7 +518,7 @@ namespace SCallLog.Controllers
                     {
 
                         string filename = refNumber + '_' + complaintResponse.companyId + '_' + complaintResponse.loggedId + ".jpg";
-
+                        //
                         if (!string.IsNullOrEmpty(complaintResponse.img_data))
                         {
                             bool imge = SaveImage(complaintResponse.img_data, filename);
